@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>NAUTI AMIGO Luxury Cruise</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Gilda+Display&display=swap"
+    />
+    <link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+  <style>
+  
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #aa8453;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #aa8453;
+    }
+    .header-phone-icon {
+      width: 40px;
+      height: 40px;
+      right: 20px;
+      background-color: #aa8453;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .header-phone-icon:hover {
+      background-color: #aa8453;
+    }
+    .footer-phone-icon {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      left: 20px;
+      background-color: #aa8453;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .footer-phone-icon:hover {
+      background-color: #aa8453;
+    }
+    
+	/*#sticky-footer button, button.call-us, button.whatsapp {*/
+	/*  width: 46%;*/
+	/*  display: flex;*/
+	/*  align-items: center;*/
+	/*  padding: 10px;*/
+	/*  border: none;*/
+	/*  justify-content: center;*/
+	/*  border-radius: 4px;*/
+	/*  font-size: .9rem;*/
+	/*  color: #fff;*/
+	/*  z-index: 10;*/
+	/*  font-weight: 500;*/
+	/*}*/
+	
+	/*.sticky-footer {*/
+	/*  display: flex;*/
+	/*  justify-content: space-evenly;*/
+	/*  background: #fff;*/
+	/*  padding: 10px 0;*/
+	/*  position: fixed;*/
+	/*  bottom: 0;*/
+	/*  left: 0;*/
+	/*  width: 100%;*/
+	/*  z-index: 10;*/
+	/*}*/
+	
+	/*.sticky-footer button img{filter:invert(1)}*/
+	/*.sticky-footer button img, #sticky-footer button mat-icon {*/
+	/*  font-size: 20px;*/
+	/*  width: 24px !important;*/
+	/*  margin-right: 5px;*/
+	/*}*/
+	/*.sticky-footer button.call-us,button.call-us {*/
+	/*  background-color: transparent;*/
+	/*  border: 1px solid #ff7613;*/
+	/*  color: #ff7613;*/
+	/*}*/
+	/*.sticky-footer button.whatsapp,button.whatsapp{background-color: #ff7613;}*/
+  </style>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+      <div id="preloader-status">
+        <div class="preloader-position loader"><span></span></div>
+      </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo-wrapper">
+          <a class="logo" href="index.html">
+            <img src="img/logo.png" class="logo-img" alt="" />
+          </a>
+        </div>
+        <!-- Button -->
+        <!-- <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
+        </button> -->
+        
+        <button
+          class="navbar-toggler phone-icon"
+          type="button"
+          data-bs-toggle="collapse"
+          onclick="window.location.href='tel:9324105081'"
+        >
+      <p class="footer-contact-phone">
+        <span class="flaticon-call header-phone-icon"></span>
+      </p>
+</button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+           </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Slider -->
+    <header class="header slider-fade">
+      <div class="owl-carousel owl-theme">
+        <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+        <div
+          class="text-center item bg-img"
+          data-overlay-dark="2"
+          data-background="img/slider/1.jpeg"
+        >
+          <div class="v-middle caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+                  <span>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                  </span>
+                  <h4>Experiance The Luxury</h4>
+                  <h1>Enjoy a Luxury Experience</h1>
+                  <div class="butn-light mt-30 mb-30">
+                    <a href="#" data-scroll-nav="1"
+                      ><span>Our Offerings</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center item bg-img"
+          data-overlay-dark="2"
+          data-background="img/slider/4.jpeg"
+        >
+          <div class="v-middle caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+                  <span>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                  </span>
+                  <h4>Unique Place to Relax & Enjoy</h4>
+                  <h1>The Perfect Base For You</h1>
+                  <div class="butn-light mt-30 mb-30">
+                    <a href="#" data-scroll-nav="1"
+                      ><span>Our Offerings</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center item bg-img"
+          data-overlay-dark="3"
+          data-background="img/slider/6.jpeg"
+        >
+          <div class="v-middle caption">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+                  <span>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                    <i class="star-rating"></i>
+                  </span>
+                  <h4>The Ultimate Luxury Experience</h4>
+                  <h1>Enjoy The Best Moments of Life</h1>
+                  <div class="butn-light mt-30 mb-30">
+                    <a href="#" data-scroll-nav="1"
+                      ><span>Our Offerings</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slider reservation -->
+      <div class="reservation">
+        <a href="tel:9324105081
+		
+		
+		">
+          <div class="icon d-flex justify-content-center align-items-center">
+            <i class="flaticon-call"></i>
+          </div>
+          <div class="call"><span>932 410 5081</span> <br />Reservation</div>
+        </a>
+      </div>
+    </header>
+    <!-- About -->
+    <section class="about section-padding">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-6 mb-30 animate-box"
+            data-animate-effect="fadeInUp"
+          >
+            <span>
+              <i class="star-rating"></i>
+              <i class="star-rating"></i>
+              <i class="star-rating"></i>
+              <i class="star-rating"></i>
+              <i class="star-rating"></i>
+            </span>
+            <div class="section-subtitle">NAUTI AMIGO Luxury Cruise</div>
+            <div class="section-title">Enjoy a Luxury Experience</div>
+            <p>
+              Embark on a journey of luxury and relaxation with NAUTI AMIGO, Goa’s premium cruise experience. Designed for those who appreciate the finer things in life, NAUTI AMIGO offers an unparalleled blend of comfort, entertainment, and scenic beauty along the mesmerizing Goan coastline.
+            </p>
+            <p>
+             NAUTI AMIGO combines Goan charm with international standards of luxury, making it a must-try experience for locals and tourists alike. Whether you're seeking a romantic getaway, a memorable celebration, or a serene escape, this cruise offers something for everyone.
+            </p>
+            <!-- call -->
+            <div class="reservations">
+              <div class="icon"><span class="flaticon-call"></span></div>
+              <div class="text">
+                <p>Reservation</p>
+                <a href="tel:932-410-5081">932 410 5081</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
+            <img src="img/rooms/8.jpeg" alt="" class="mt-90 mb-30" />
+          </div>
+          <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
+            <img src="img/rooms/2.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Rooms -->
+    <section class="rooms1 section-padding bg-darkblack" data-scroll-index="1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-subtitle">NAUTI AMIGO Luxury Cruise</div>
+            <div class="section-title">Our Packages</div>
+          </div>
+        </div>
+        <div class="row">
+		  <div class="col-md-6">
+            <div class="item">
+              <div class="position-re o-hidden">
+                <img src="img/rooms/4.jpeg" alt="" />
+              </div>
+              <span class="category"><a href="tel:+919324105081">Book</a></span>
+              <div class="con">
+                <h6><a href="#">₹2499 / Person</a></h6>
+                <h5><a href="#">LUXURY DINNER CRUISE</a></h5>
+                <div class="line"></div>
+                <div class="row facilities">
+                  <div class="col col-md-7">
+                    <ul>
+                      <li><i class="flaticon-bed"></i></li>
+                      <li><i class="flaticon-bath"></i></li>
+                      <li><i class="flaticon-breakfast"></i></li>
+                      <li><i class="flaticon-towel"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col col-md-5 text-end">
+                    <div class="permalink">
+                      <a href="https://wa.me/919324105081"
+                        >Details <i class="ti-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="item">
+              <div class="position-re o-hidden">
+                <img src="img/rooms/7.jpeg" alt="" />
+              </div>
+              <span class="category"><a href="tel:+919324105081">Book</a></span>
+              <div class="con">
+                <h6><a href="#">₹2999 / Person</a></h6>
+                <h5><a href="#">VIP LUXURY DINNER CRUISE</a></h5>
+                <div class="line"></div>
+                <div class="row facilities">
+                  <div class="col col-md-7">
+                    <ul>
+                      <li><i class="flaticon-bed"></i></li>
+                      <li><i class="flaticon-bath"></i></li>
+                      <li><i class="flaticon-breakfast"></i></li>
+                      <li><i class="flaticon-towel"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col col-md-5 text-end">
+                    <div class="permalink">
+                      <a href="https://wa.me/919324105081"
+                        >Details <i class="ti-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="item">
+              <div class="position-re o-hidden">
+                <img src="img/rooms/1.jpeg" alt="" />
+              </div>
+              <span class="category"><a href="tel:+919324105081">Book</a></span>
+              <div class="con">
+                <h6><a href="#">₹699 / Person</a></h6>
+                <h5><a href="#">SUNSET CRUISE</a></h5>
+                <div class="line"></div>
+                <div class="row facilities">
+                  <div class="col col-md-7">
+                    <ul>
+                      <li><i class="flaticon-bed"></i></li>
+                      <li><i class="flaticon-bath"></i></li>
+                      <li><i class="flaticon-breakfast"></i></li>
+                      <li><i class="flaticon-towel"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col col-md-5 text-end">
+                    <div class="permalink">
+                      <a href="https://wa.me/919324105081"
+                        >Details <i class="ti-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item">
+              <div class="position-re o-hidden">
+                <img src="img/rooms/2.jpeg" alt="" />
+              </div>
+              <span class="category"><a href="tel:+919324105081">Book</a></span>
+              <div class="con">
+                <h6><a href="#">₹2499 / Person</a></h6>
+                <h5><a href="#">LUNCH CRUISE</a></h5>
+                <div class="line"></div>
+                <div class="row facilities">
+                  <div class="col col-md-7">
+                    <ul>
+                      <li><i class="flaticon-bed"></i></li>
+                      <li><i class="flaticon-bath"></i></li>
+                      <li><i class="flaticon-breakfast"></i></li>
+                      <li><i class="flaticon-towel"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col col-md-5 text-end">
+                    <div class="permalink">
+                      <a href="https://wa.me/919324105081"
+                        >Details <i class="ti-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item">
+              <div class="position-re o-hidden">
+                <img src="img/rooms/3.jpeg" alt="" />
+              </div>
+              <span class="category"><a href="tel:+919324105081">Book</a></span>
+              <div class="con">
+                <h6><a href="#">₹149999 / Hour</a></h6>
+                <h5><a href="#">PRIVATE BOAT PARTY</a></h5>
+                <div class="line"></div>
+                <div class="row facilities">
+                  <div class="col col-md-7">
+                    <ul>
+                      <li><i class="flaticon-bed"></i></li>
+                      <li><i class="flaticon-bath"></i></li>
+                      <li><i class="flaticon-breakfast"></i></li>
+                      <li><i class="flaticon-towel"></i></li>
+                    </ul>
+                  </div>
+                  <div class="col col-md-5 text-end">
+                    <div class="permalink">
+                      <a href="https://wa.me/919324105081"
+                        >Details <i class="ti-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+    </section>
+    <section class="section-padding">
+      <div class="col-md-12 container ">
+        <div class="section-subtitle">NAUTI AMIGO Luxury Cruise</div>
+        <div class="section-title">Our Packages</div>
+        <div id="cruise-container"></div>
+      </div>
+    </div>
+    </section>
+    <!-- Pricing -->
+    <section class="pricing section-padding bg-darkblack">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="section-subtitle"><span>OPT US FOR ALL YOUR IMPORTANT EVENTS</span></div>
+            <div class="section-title">EVENTS THAT WE OFFER </div>
+            <p class="color-2">
+              The best prices for your relaxing vacation. The utanislen quam
+              nestibulum ac quame odion elementum sceisue the aucan.
+            </p>
+            <p class="color-2">
+              Orci varius natoque penatibus et magnis disney parturient monte
+              nascete ridiculus mus nellen etesque habitant morbine.
+            </p>
+            <div class="reservations mb-30">
+              <div class="icon"><span class="flaticon-call"></span></div>
+              <div class="text">
+                <p class="color-2">For information</p>
+                <a href="tel:932-410-5081">932 410 5081</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="owl-carousel owl-theme">
+              <div class="pricing-card">
+                <img src="img/pricing/1.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">1. Waterfront Weddings</span></div>
+                  <ul class="list-unstyled list">
+                    <li> Imagine celebrating your special day on the open-air deck of a private luxury cruise boat in Goa with the beautiful skyline as your backdrop. Waterfront weddings in Goa offer a unique, refreshing alternative to more traditional wedding venues on land. Our luxury cruise boat in Goa offers stunning, magical settings for weddings, receptions, rehearsal dinners, proposals, and more.</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="pricing-card">
+                <img src="img/pricing/2.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">2. Corporate Events</span></div>
+                  <ul class="list-unstyled list">
+                    <li> There is nothing more enjoyable than spending a relaxing day or night floating down the waters of Goa on a luxury cruise boat. Whether it’s dancing or good conversation and food, sharing time on a luxurious party boat in Goa can bring almost any group of people together. That’s why more and more companies are choosing to reward their employees with the good time fun of a day or night on a party boat in Goa. If you are looking for a unique way to encourage team bonding within your company, renting a luxury cruise boat in Goa for corporate team building is a great way to bring your employees together.</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="pricing-card">
+                <img src="img/pricing/1.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">3. Team Bonding Parties</span></div>
+                  <ul class="list-unstyled list">
+                    <li> If you are an employer or business owner who wants to help bring a little bit of fun to your work environment, choosing to rent a party boat will make your employees truly happy. Who wouldn’t love to float along the blue waters of Goa on a luxurious party boat? Your employees would definitely love to, and this can be a great way to nurture the relationships of those who contribute to the success of your business. When you reward your employees with the team building fun of a party boat in Goa, you are showing them you truly appreciate all their hard work and dedication.</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="pricing-card">
+                <img src="img/pricing/2.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">4. Bachelorette Parties</span></div>
+                  <ul class="list-unstyled list">
+                    <li> Celebrate Your Last Night of Singledom on a Bachelorette Party Boat in Goa. There is NO party in the area like a boat party in Goa, a luxury party boat is the perfect venue for bachelorette fun. Your party boat cruise is limited to your group, so you have all the privacy you need for a good time. The only people onboard other than your captain will be your friends. Bring who you want, and feel free to bring what you want as well – food, drinks, and whatever else you need for a good time.
+</li>
+                    
+                  </ul>
+                </div>
+              </div>
+			  <div class="pricing-card">
+                <img src="img/pricing/1.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">5. Retirement Party</span></div>
+                  <ul class="list-unstyled list">
+                    <li> Retirement only comes around once, so it makes sense that you‘d want to throw a big party for your loved one when it‘s their turn to move on. Traditionally, retirement parties involve close friends, family members and colleagues. Venues are either your home or a restaurant. For the most part, there‘s nothing wrong with this particular approach, but it‘s not overly exciting either. If you really want to escort your loved one into retirement in style, why not book them a private cruise boat in Goa for the party?</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="pricing-card">
+                <img src="img/pricing/2.jpg" alt="" />
+                <div class="desc">
+                  <div class="amount">6. Anniversary Party</span></div>
+                  <ul class="list-unstyled list">
+                    <li> Renewing your vows? Celebrating a lifetime of love with your husband or wife? We can help you plan the perfect vow renewal or anniversary party in Goa. Our luxury Cruise Boat in Goa provide the ideal venue and a breathtaking backdrop for an unforgettable event. An occasion this special deserves a magnificent venue, and we’ve got just the space! Make this year truly special and come aboard our luxury cruise boat in Goa for your anniversary party. Combining state-of-the-art vessels with luxurious decor, outstanding service, and breathtaking views, our luxury Boat in Goa is the ultimate venue for an unforgettable anniversary party to honor your romantic milestone.</li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Promo Video -->
+    <section
+      class="video-wrapper video section-padding bg-img bg-fixed"
+      data-overlay-dark="3"
+      data-background="img/slider/2.jpeg"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 text-center">
+            <span
+              ><i class="star-rating"></i><i class="star-rating"></i
+              ><i class="star-rating"></i><i class="star-rating"></i
+              ><i class="star-rating"></i
+            ></span>
+            <div class="section-subtitle">
+              <span>Nauti Amigo Luxury Cruise</span>
+            </div>
+            <div class="section-title"><span>Promotional Video</span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center col-md-12">
+            <a class="vid" href="img/nautiamigo.mp4">
+              <div class="vid-butn">
+                <span class="icon">
+                  <i class="ti-control-play"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Facilties -->
+    <section class="facilties section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-subtitle">NAUTI AMIGO Luxury Cruise</div>
+            <div class="section-title">ADDITIONAL SERVICES</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-world"></span>
+              <h5>MEETINGS</h5>
+              <p>
+                Pickup and Drop available from North Goa specific locations.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-world"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-car"></span>
+              <h5>CONFERENCES</h5>
+              <p>
+                Complimentry drinks are included in the offerings.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-car"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-bed"></span>
+              <h5>SEMINARS</h5>
+              <p>
+                Ride will be safe and secure for all the biddies joining.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-bed"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-swimming"></span>
+              <h5>FILM SHOOTS</h5>
+              <p>
+                Celebrate Your Last Night of Singledom on a Bachelorette Party Boat in Goa.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-swimming"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-wifi"></span>
+              <h5>BIRTHDAYS</h5>
+              <p>
+                Renewing your vows? Celebrating a lifetime of love with your husband or wife.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-wifi"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="single-facility animate-box"
+              data-animate-effect="fadeInUp"
+            >
+              <span class="flaticon-breakfast"></span>
+              <h5>FAMILY EVENTS</h5>
+              <p>
+                Makes sense that you‘d want to throw a big party for your loved one when it‘s their turn to move on.
+              </p>
+              <div class="facility-shape">
+                <span class="flaticon-breakfast"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testiominals -->
+    <section class="testimonials">
+      <div
+        class="background bg-img bg-fixed section-padding pb-0"
+        data-background="img/slider/2.jpg"
+        data-overlay-dark="3"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <div class="testimonials-box">
+                <div class="head-box">
+                  <h6>Testimonials</h6>
+                  <h4>What Client's Say?</h4>
+                  <div class="line"></div>
+                </div>
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <span class="quote"><img src="img/quot.png" alt="" /></span>
+                    <p>
+                      Had a great experience....went with my family....better than other cruise as I have tried other one as well last year....they have Air conditioner Vip lounge as well, fun activities for kids, couples , dance, good food.....can surely try once if you want to have dinner cruise experience....crew is also very nice and helpful.
+                    </p>
+                    <div class="info">
+                      <div class="author-img">
+                        <img src="img/team/4.jpg" alt="" />
+                      </div>
+                      <div class="cont">
+                        <span
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i
+                        ></span>
+                        <h6>Charul Arora</h6>
+                        <span>Guest review</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <span class="quote"><img src="img/quot.png" alt="" /></span>
+                    <p>
+                      Great experience. Was there on the occasion of my wife’s bday and asked the hosts for a cake 10 mins before departure. Still the hosts especially Shelton was too helpful and got the same arranged. Thank you so much guys for making this happen.
+Wonderful experience and had lots of fun. Definitely recommended.
+                    </p>
+                    <div class="info">
+                      <div class="author-img">
+                        <img src="img/team/1.jpg" alt="" />
+                      </div>
+                      <div class="cont">
+                        <span
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i
+                        ></span>
+                        <h6>Sarvesh Kumar Rai</h6>
+                        <span>Guest review</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <span class="quote"><img src="img/quot.png" alt="" /></span>
+                    <p>
+                      Had an amazing time at nauti Amigo cruise, The vip lounge was fantastic, and the food was spot on. Big thanks to the team for  their support. Truly a memorable experience
+Highly recommend.
+                    </p>
+                    <div class="info">
+                      <div class="author-img">
+                        <img src="img/team/5.jpg" alt="" />
+                      </div>
+                      <div class="cont">
+                        <span
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i><i class="star-rating"></i
+                          ><i class="star-rating"></i
+                        ></span>
+                        <h6>Dolly Bajaj</h6>
+                        <span>Guest review</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section class="services section-padding">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-6 p-0 animate-box"
+            data-animate-effect="fadeInLeft"
+          >
+            <div class="img left">
+              <a href="#"
+                ><img src="img/restaurant/1.jpeg" alt=""
+              /></a>
+            </div>
+          </div>
+          <div
+            class="col-md-6 p-0 bg-darkblack valign animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <div class="content">
+              <div class="cont text-left">
+                <div class="info">
+                  <h6>Discover</h6>
+                </div>
+                <h4>Nauti Amigo Cruise</h4>
+                <p>
+                  We take pride in being the biggest club in town! Goa's premier luxury cruise boat features a VVIP Lounge, offering unmatched comfort and exclusivity. Indulge in the ultimate luxury experience with private access to the most scenic views.
+                </p>
+                <div class="butn-dark">
+                  <a href="#"><span>Learn More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-md-6 bg-darkblack p-0 order2 valign animate-box"
+            data-animate-effect="fadeInLeft"
+          >
+            <div class="content">
+              <div class="cont text-left">
+                <div class="info">
+                  <h6>Experiences</h6>
+                </div>
+                <h4>Open To Sky Lounge</h4>
+                <p>
+                  Our stunning vessel also boasts an Open-Air Dance Floor on the top deck, where you can groove beneath the starlit sky, surrounded by the serene beauty of the Mandovi River. Immerse yourself in an unforgettable evening filled with music, entertainment, and an enchanting open-air ambiance.
+                </p>
+                <div class="butn-dark">
+                  <a href="#"><span>Learn More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 p-0 order1 animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <div class="img">
+              <a href="#"><img src="img/spa/3.jpeg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-md-6 p-0 animate-box"
+            data-animate-effect="fadeInLeft"
+          >
+            <div class="img left">
+              <a href="#"><img src="img/spa/2.jpeg" alt="" /></a>
+            </div>
+          </div>
+          <div
+            class="col-md-6 p-0 bg-darkblack valign animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <div class="content">
+              <div class="cont text-left">
+                <div class="info">
+                  <h6>Modern</h6>
+                </div>
+                <h4>VVIP Lounge</h4>
+                <p>
+                  Discover unmatched luxury aboard Goa’s Premium Cruise with the exclusive VVIP Lounge. Indulge in supreme comfort, elegant interiors, and breathtaking views from the cruise’s most coveted spot. Whether relaxing with a drink or soaking in the serene Mandovi River, the VVIP Lounge redefines sophistication and exclusivity.
+                </p>
+                <div class="butn-dark">
+                  <a href="#"><span>Learn More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-md-6 bg-darkblack p-0 order2 valign animate-box"
+            data-animate-effect="fadeInLeft"
+          >
+            <div class="content">
+              <div class="cont text-left">
+                <div class="info">
+                  <h6>Experiences</h6>
+                </div>
+                <h4>Food & Beverages</h4>
+                <p>
+                  The food and beverages at Nauti Amigo are truly exceptional! From delectable dishes to refreshing drinks, every bite and sip is crafted to perfection, offering a culinary experience that perfectly complements the luxury cruise ambiance.
+                </p>
+                <div class="butn-dark">
+                  <a href="#"><span>Learn More</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 p-0 order1 animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <div class="img">
+              <a href="#"><img src="img/spa/1.jpeg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- Reservation & Booking Form -->
+    <section class="testimonials">
+      <div
+        class="background bg-img bg-fixed section-padding pb-0"
+        data-background="img/slider/2.jpg"
+        data-overlay-dark="2"
+      >
+        <div class="container">
+          <div class="row">
+            <!-- Reservation -->
+            <div class="col-md-5 mb-30 mt-30">
+              <p>
+                <i class="star-rating"></i><i class="star-rating"></i
+                ><i class="star-rating"></i><i class="star-rating"></i
+                ><i class="star-rating"></i>
+              </p>
+              <h5>
+                Experience ultimate luxury aboard a Triple-Deck VIP Cruise, featuring an AC Deck with VIP Lounge, a Private Jetty with Waiting Lounge, and an Open-to-Sky Dance Floor. Enjoy a Reserved Private Table for your family and unmatched comfort throughout your journey.
+              </h5>
+              <div class="reservations mb-30">
+                <div class="icon color-1">
+                  <span class="flaticon-call"></span>
+                </div>
+                <div class="text">
+                  <p class="color-1">Reservation</p>
+                  <a class="color-1" href="tel:932-410-5081">932 410 5081</a>
+                </div>
+              </div>
+              <p>
+                <i class="ti-check"></i><small>Call us, it's free.</small>
+              </p>
+            </div>
+            <!-- Booking From -->
+            <div class="col-md-5 offset-md-2">
+              <div class="booking-box">
+                <div class="head-box">
+                  <h6>Nauti Amigo Luxury Cruise</h6>
+                  <h4>Cruise Enquiry Form</h4>
+                </div>
+                <div class="booking-inner clearfix">
+                  <form action="#" class="form1 clearfix">
+                    <div class="row">
+					  <div class="col-md-12">
+                        <div class="input1_wrapper">
+                          <label>Name</label>
+                          <div class="input10_inner">
+                            <input
+                              type="text"
+                              placeholder="Name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+					  <div class="col-md-12">
+                        <div class="input1_wrapper">
+                          <label>Phone Number</label>
+                          <div class="input10_inner">
+                            <input
+                              type="text"
+                              placeholder="Phone Number"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-12">
+                        <div class="input1_wrapper">
+                          <label>Activity Date</label>
+                          <div class="input1_inner">
+                            <input
+                              type="text"
+                              class="form-control input datepicker"
+                              placeholder="Activity date"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="select1_wrapper">
+                          <label>Adults</label>
+                          <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                              <option value="0">Adults</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="select1_wrapper">
+                          <label>Children</label>
+                          <div class="select1_inner">
+                            <select class="select2 select" style="width: 100%">
+                              <option value="0">Children</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" class="btn-form1-submit mt-15">
+                          Check Availability
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Clients -->
+    <section class="clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="owl-carousel owl-theme">
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/1.png" alt="" /></a>
+              </div>
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/2.png" alt="" /></a>
+              </div>
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/3.png" alt="" /></a>
+              </div>
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/4.png" alt="" /></a>
+              </div>
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/5.png" alt="" /></a>
+              </div>
+              <div class="clients-logo">
+                <a href="#0"><img src="img/clients/6.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer-column footer-about">
+                <h3 class="footer-title">About Nauti Amigo</h3>
+                <p class="footer-about-text">
+                  We are the biggest club in town Goa’s Luxury Premium Cruise Boat comes with the VVIP Lounge area, which offers the highest level of luxury & comfort.  
+                </p>
+
+                <div class="footer-language">
+                  <i class="lni ti-world"></i>
+                  <select onchange="location = this.value;">
+                    <option value="https://nautiamigo.com/">English</option>
+                    <option value="https://nautiamigo.com/">German</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 offset-md-1">
+              <div class="footer-column footer-explore clearfix">
+                <h3 class="footer-title">Explore</h3>
+                <ul class="footer-explore-list list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer-column footer-contact">
+                <h3 class="footer-title">Contact</h3>
+                <p class="footer-contact-text">
+                  123/1, MARINHA DOURADA RD, TAMUDKI VADO, ARPORA, BAGA, GOA - 403518
+                </p>
+                <div class="footer-contact-info">
+                  <p class="footer-contact-phone">
+                    <span class="flaticon-call"></span> 9324105081
+                  </p>
+                  <p class="footer-contact-mail">sales@nautiamigo.com</p>
+                </div>
+                <div class="footer-about-social-list">
+                  <a href="#"><i class="ti-instagram"></i></a>
+                  <a href="#"><i class="ti-twitter"></i></a>
+                  <a href="#"><i class="ti-youtube"></i></a>
+                  <a href="#"><i class="ti-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+		
+	  
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-bottom-inner">
+                <p class="footer-bottom-copy-right">
+                  © Copyright 2024 by <a href="#">www.nautiamigo.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  <!--<div class="sticky-footer">-->
+			<!--<button class="call-us" onclick="callPhoneNumber('+919324105081')">Call Now</button>-->
+			<!--<button class="whatsapp" onclick="openWhatsApp('+919324105081')">Get Details</button>-->
+	  <!--</div>-->
+    <a href="/" onclick="window.location.href='tel:9324105081'" class="flaticon-call footer-phone-icon" target="_blank" title="Chat on WhatsApp">
+    </a>
+	  <a href="https://wa.me/+919324105081" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/offer-card.js"></script>
+	
+	<script>
+    // Function to initiate a phone call
+    function callPhoneNumber(phoneNumber) {
+      window.location.href = `tel:${phoneNumber}`;
+    }
+
+    // Function to open WhatsApp with the given phone number
+    function openWhatsApp(phoneNumber) {
+      const message = "Hi, I would like to enquire about Nauti Amio Cruise!";
+      const encodedMessage = encodeURIComponent(message); // Ensure the message is properly encoded for URL
+      window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    }
+
+
+  </script>
+	
+  </body>
+</html>
