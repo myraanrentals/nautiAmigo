@@ -569,7 +569,7 @@ const offer = [
 ];
 
 function renderCruiseCards(cruises) {
-    const container = document.getElementById("cruise-container");
+  const container = $("#cruise-container");  
   
     cruises.forEach((offer) => {
       const card = document.createElement("div");
@@ -653,7 +653,7 @@ function renderCruiseCards(cruises) {
                 </div>
                 <div class="show-full-info">
                   <div class="whatsapp link link-cursor" onclick="openWhatsApp('+919324105081')">
-                    <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
+                    <img src="/img/dinnercruise/whatsapp_icon.png"/>
                     Get more details
                     <img src="./img/images/svg/arrow-ico.svg" alt="" />
                   </div>
@@ -664,7 +664,19 @@ function renderCruiseCards(cruises) {
         </div>
       `;
   
-      container.appendChild(card);
+      container.append(card);
+    });
+
+
+    container.owlCarousel({
+      items: 1,            // show 1 card at a time
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
     });
   }
   
