@@ -3,7 +3,7 @@ const offer = [
     cruiseId: 4,
     title: "Lunch Cruise in Goa",
     category: "Lunch Cruise in Goa",
-    routingUrl: "book-cruise-in-goa",
+    routingUrl: "book-dinner-cruise-in-goa/details/book-cruise-in-goa",
     rating: "4.8",
     reviews: "3867",
     oldPrice: "2999",
@@ -145,7 +145,7 @@ const offer = [
     cruiseId: 5,
     title: "Luxury Dinner Cruise in Goa",
     category: "Luxury Dinner Cruise in Goa",
-    routingUrl: "book-premium-dinner-cruise-in-goa",
+    routingUrl: "book-dinner-cruise-in-goa/details/book-luxury-dinner-cruise-in-goa",
     rating: "4.8",
     reviews: "3867",
     oldPrice: "2499",
@@ -287,7 +287,7 @@ const offer = [
     cruiseId: 7,
     title: "Sunset Cruise in Goa",
     category: "Sunset Cruise in Goa",
-    routingUrl: "book-luxury-dinner-cruise-in-goa",
+    routingUrl: "book-dinner-cruise-in-goa/details/book-sunset-cruise-in-goa",
     rating: "4.8",
     reviews: "3867",
     oldPrice: "799",
@@ -428,7 +428,7 @@ const offer = [
     cruiseId: 1,
     title: "Private Yachts in Goa",
     category: "Private Yachts",
-    routingUrl: "lunch-cruise-in-goa",
+    routingUrl: "book-dinner-cruise-in-goa/details/book-our-private-yachts-in-goa",
     rating: "4.8",
     reviews: "3867",
     oldPrice: "1199",
@@ -632,7 +632,7 @@ function renderCruiseCards(cruises) {
               </div>
               <div class="flex flex-column mobile-reverse">
                 <div class="button-group">
-                  <button class="primary-button" onclick="window.location.href='tel:9324105081'">
+                  <button class="primary-button" onclick="window.location.href='http://localhost:4200/${offer.routingUrl}'">
                     Book Now
                   </button>
                   <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
