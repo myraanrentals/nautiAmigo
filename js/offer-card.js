@@ -1,6 +1,6 @@
 // Environment configuration
 const environment = {
-  production: false,
+  production: true,
   redirectUrlProd: 'https://nautiamigo.com',
   redirectUrlDev: 'http://localhost:37581/',
 };
