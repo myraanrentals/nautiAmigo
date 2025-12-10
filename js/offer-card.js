@@ -1,3 +1,15 @@
+// Environment configuration
+const environment = {
+  production: false,
+  redirectUrlProd: 'https://nautiamigo.com',
+  redirectUrlDev: 'http://localhost:37581/',
+};
+
+// Helper function to get the base URL based on environment
+function getBaseUrl() {
+  return environment.production ? environment.redirectUrlProd : environment.redirectUrlDev;
+}
+
 const offer = [
   {
     cruiseId: 4,
@@ -632,7 +644,7 @@ function renderCruiseCards(cruises) {
               </div>
               <div class="flex flex-column mobile-reverse">
                 <div class="button-group">
-                  <button class="primary-button" onclick="window.location.href='http://localhost:4200/${offer.routingUrl}'">
+                  <button class="primary-button" onclick="window.location.href='${getBaseUrl()}${offer.routingUrl}'">
                     Book Now
                   </button>
                   <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
