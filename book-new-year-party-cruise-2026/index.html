@@ -507,6 +507,8 @@
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backdrop-filter: blur(20px);
         position: relative;
+        display: flex;
+        flex-direction: column;
       }
 
       .entertainment-card:hover {
@@ -518,11 +520,12 @@
 
       .card-image {
         width: 100%;
-        height: 250px;
+        height: 270px;
         background-size: cover;
         background-position: center;
         position: relative;
         overflow: hidden;
+        background-repeat: no-repeat;
       }
 
       .card-image::before {
@@ -553,10 +556,13 @@
       .card-content {
         padding: 35px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
       }
 
       .card-duration {
-        margin-top: 20px;
+        margin-top: auto;
         padding: 12px 20px;
         background: linear-gradient(
           135deg,
@@ -588,6 +594,7 @@
         line-height: 1.8;
         text-align: center;
         font-size: 1.1rem;
+        flex: 1;
       }
 
       /* Food & Drinks Section */
@@ -834,11 +841,9 @@
       .price-card {
         flex-shrink: 0;
         width: 320px;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 215, 0, 0.15),
-          rgba(255, 215, 0, 0.08)
-        );
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         border: 2px solid rgba(255, 215, 0, 0.5);
         border-radius: 40px;
         padding: 60px 40px;
@@ -848,6 +853,27 @@
         overflow: hidden;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
           0 0 25px rgba(255, 215, 0, 0.2);
+      }
+      
+      .price-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.3)
+        );
+        z-index: 0;
+        border-radius: 40px;
+      }
+      
+      .price-card > * {
+        position: relative;
+        z-index: 1;
       }
 
       .price-card::before {
@@ -1380,9 +1406,14 @@
 
         .price-card {
           width: 260px;
+          height: 160px;
           min-width: 260px;
           padding: 30px 20px;
           border-radius: 25px;
+        }
+        .price-card::after{
+          border-radius: 25px;
+
         }
 
         .price-title {
@@ -1518,72 +1549,14 @@
         <!-- Desktop Slider with Auto-Scroll -->
         <div class="pricing-slider-wrapper pricing-slider-desktop">
           <div class="pricing-slider" id="pricingSliderDesktop">
-            <div class="price-card">
-              <h3 class="price-title">Adults (11+)</h3>
-              <div class="price-amount" id="adult-price">₹4,999</div>
-              <p class="price-subtitle">per person</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (5-11)</h3>
-              <div class="price-amount" id="kids-price">₹3,499</div>
-              <p class="price-subtitle">per child</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
+            <!-- Cards will be generated dynamically by JavaScript -->
           </div>
         </div>
 
         <!-- Mobile Slider with Manual Scroll -->
         <div class="pricing-slider-wrapper pricing-slider-mobile">
           <div class="pricing-slider" id="pricingSliderMobile">
-            <div class="price-card">
-              <h3 class="price-title">Adults (11+)</h3>
-              <div class="price-amount" id="adult-price-mobile">₹4,999</div>
-              <p class="price-subtitle">per person</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (5-11)</h3>
-              <div class="price-amount" id="kids-price-mobile">₹3,499</div>
-              <p class="price-subtitle">per child</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
-            <div class="price-card">
-              <h3 class="price-title">Kids (Under 5)</h3>
-              <div class="price-amount">FREE!</div>
-              <p class="price-subtitle">complimentary</p>
-            </div>
+            <!-- Cards will be generated dynamically by JavaScript -->
           </div>
         </div>
         <a 
@@ -1612,193 +1585,13 @@
         
         <!-- Desktop Grid View -->
         <div class="entertainment-grid entertainment-grid-desktop">
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/PR (11).JPG')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Bollywood Dance</h3>
-              <p class="card-description">
-                Bollywood dance performances featuring the best of Indian
-                cinema with classic and contemporary songs, choreography, and
-                costumes
-              </p>
-              <div class="card-duration">Duration: 30 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/dn.jpg')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Tollywood Dance</h3>
-              <p class="card-description">
-                Tollywood dance performances featuring the best of Telugu cinema
-                with classic and contemporary songs, choreography, and costumes
-              </p>
-              <div class="card-duration">Duration: 30 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/b/3/3/b33046af-ee45-43cc-88f1-15014861a754_large/joyful-barn-dance-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Games and Fun</h3>
-              <p class="card-description">
-                Interactive games and luxury activities for all age groups with
-                exciting participation, team challenges, and entertainment
-              </p>
-              <div class="card-duration">Duration: 40 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/2/1/3/213738a1-9f99-4a78-a190-112ff436fc77_large/mystical-venetian-mask-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Live DJ</h3>
-              <p class="card-description">
-                Professional live DJ spinning the hottest international and
-                Bollywood tracks for the entire evening
-              </p>
-              <div class="card-duration">All Night Long</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/d/d/d/ddd33681-a09f-44c8-94e1-6bb9be258c8e_large/midnight-dj-magic-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Mr. & Miss/Mrs. 2026</h3>
-              <p class="card-description">
-                Glamorous beauty pageant contest to crown the winners of the
-                night with exciting luxury prizes and prestigious recognition
-              </p>
-              <div class="card-duration">Grand Finale</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/PR (21).JPG')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Exclusive Spot Prizes</h3>
-              <p class="card-description">
-                Amazing luxury prizes and premium giveaways for participants
-                aged 1-99 years throughout the evening with surprise rewards
-              </p>
-              <div class="card-duration">Multiple Rounds</div>
-            </div>
-          </div>
+          <!-- Cards will be generated dynamically by JavaScript -->
         </div>
 
         <!-- Mobile Slider View -->
         <div class="entertainment-slider-wrapper entertainment-slider-mobile">
           <div class="entertainment-slider" id="entertainmentSlider">
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/PR (11).JPG')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Bollywood Dance</h3>
-                <p class="card-description">
-                  Bollywood dance performances featuring the best of Indian
-                  cinema with classic and contemporary songs, choreography, and
-                  costumes
-                </p>
-                <div class="card-duration">Duration: 30 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/dn.jpg')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Tollywood Dance</h3>
-                <p class="card-description">
-                  Tollywood dance performances featuring the best of Telugu cinema
-                  with classic and contemporary songs, choreography, and costumes
-                </p>
-                <div class="card-duration">Duration: 30 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/b/3/3/b33046af-ee45-43cc-88f1-15014861a754_large/joyful-barn-dance-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Games and Fun</h3>
-                <p class="card-description">
-                  Interactive games and luxury activities for all age groups with
-                  exciting participation, team challenges, and entertainment
-                </p>
-                <div class="card-duration">Duration: 40 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/2/1/3/213738a1-9f99-4a78-a190-112ff436fc77_large/mystical-venetian-mask-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Live DJ</h3>
-                <p class="card-description">
-                  Professional live DJ spinning the hottest international and
-                  Bollywood tracks for the entire evening
-                </p>
-                <div class="card-duration">All Night Long</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/d/d/d/ddd33681-a09f-44c8-94e1-6bb9be258c8e_large/midnight-dj-magic-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Mr. & Miss/Mrs. 2026</h3>
-                <p class="card-description">
-                  Glamorous beauty pageant contest to crown the winners of the
-                  night with exciting luxury prizes and prestigious recognition
-                </p>
-                <div class="card-duration">Grand Finale</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/PR (21).JPG')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Exclusive Spot Prizes</h3>
-                <p class="card-description">
-                  Amazing luxury prizes and premium giveaways for participants
-                  aged 1-99 years throughout the evening with surprise rewards
-                </p>
-                <div class="card-duration">Multiple Rounds</div>
-              </div>
-            </div>
+            <!-- Cards will be generated dynamically by JavaScript -->
           </div>
         </div>
       </div>
@@ -1810,223 +1603,13 @@
         
         <!-- Desktop Grid View -->
         <div class="entertainment-grid entertainment-grid-desktop">
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/PR (11).JPG')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title"> 4 Hours Cruisning</h3>
-              <p class="card-description">
-                Bollywood dance performances featuring the best of Indian
-                cinema with classic and contemporary songs, choreography, and
-                costumes
-              </p>
-              <div class="card-duration">Duration: 30 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/dn.jpg')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">3 Deck Luxury Cruise</h3>
-              <p class="card-description">
-                Experience the ultimate luxury on the # Deck Luxury Cruise,
-                featuring world-class amenities, premium services, and
-                breathtaking views of the ocean
-              </p>
-              <div class="card-duration">Duration: 4 hours</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/b/3/3/b33046af-ee45-43cc-88f1-15014861a754_large/joyful-barn-dance-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">New Year's Eve Countdown</h3>
-              <p class="card-description">
-                Interactive games and luxury activities for all age groups with
-                exciting participation, team challenges, and entertainment
-              </p>
-              <div class="card-duration">Duration: 40 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/2/1/3/213738a1-9f99-4a78-a190-112ff436fc77_large/mystical-venetian-mask-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Fireworks Display</h3>
-              <p class="card-description">
-                Spectacular fireworks display to mark the arrival of the New Year
-                with breathtaking visuals and stunning effects
-              </p>
-              <div class="card-duration">Duration: 10 minutes</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="
-                background-image: url('https://images.stockcake.com/public/d/d/d/ddd33681-a09f-44c8-94e1-6bb9be258c8e_large/midnight-dj-magic-stockcake.jpg');
-              "
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Unlimited Starters</h3>
-              <p class="card-description">
-                Unlimited starters and drinks for the entire evening with a wide
-                variety of options to choose from
-              </p>
-              <div class="card-duration">Duration: 4 hours</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/PR (21).JPG')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Unlimited Buffet</h3>
-              <p class="card-description">
-                Unlimited buffet and drinks for the entire evening with a wide
-                variety of options to choose from
-              </p>
-              <div class="card-duration">Duration: 4 hours</div>
-            </div>
-          </div>
-          <div class="entertainment-card">
-            <div
-              class="card-image"
-              style="background-image: url('/images/PR (21).JPG')"
-            ></div>
-            <div class="card-content">
-              <h3 class="card-title">Unlimited Drinks</h3>
-              <p class="card-description">
-                Unlimited drinks for the entire evening with a wide variety of
-                options to choose from
-              </p>
-              <div class="card-duration">Duration: 4 hours</div>
-            </div>
-          </div>
+          <!-- Cards will be generated dynamically by JavaScript -->
         </div>
 
         <!-- Mobile Slider View -->
         <div class="entertainment-slider-wrapper entertainment-slider-mobile">
           <div class="entertainment-slider" id="culinarySlider">
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/PR (11).JPG')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title"> 4 Hours Cruisning</h3>
-                <p class="card-description">
-                  Bollywood dance performances featuring the best of Indian
-                  cinema with classic and contemporary songs, choreography, and
-                  costumes
-                </p>
-                <div class="card-duration">Duration: 30 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/dn.jpg')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">3 Deck Luxury Cruise</h3>
-                <p class="card-description">
-                  Experience the ultimate luxury on the # Deck Luxury Cruise,
-                  featuring world-class amenities, premium services, and
-                  breathtaking views of the ocean
-                </p>
-                <div class="card-duration">Duration: 4 hours</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/b/3/3/b33046af-ee45-43cc-88f1-15014861a754_large/joyful-barn-dance-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">New Year's Eve Countdown</h3>
-                <p class="card-description">
-                  Interactive games and luxury activities for all age groups with
-                  exciting participation, team challenges, and entertainment
-                </p>
-                <div class="card-duration">Duration: 40 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/2/1/3/213738a1-9f99-4a78-a190-112ff436fc77_large/mystical-venetian-mask-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Fireworks Display</h3>
-                <p class="card-description">
-                  Spectacular fireworks display to mark the arrival of the New Year
-                  with breathtaking visuals and stunning effects
-                </p>
-                <div class="card-duration">Duration: 10 minutes</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="
-                  background-image: url('https://images.stockcake.com/public/d/d/d/ddd33681-a09f-44c8-94e1-6bb9be258c8e_large/midnight-dj-magic-stockcake.jpg');
-                "
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Unlimited Starters</h3>
-                <p class="card-description">
-                  Unlimited starters and drinks for the entire evening with a wide
-                  variety of options to choose from
-                </p>
-                <div class="card-duration">Duration: 4 hours</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/PR (21).JPG')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Unlimited Buffet</h3>
-                <p class="card-description">
-                  Unlimited buffet and drinks for the entire evening with a wide
-                  variety of options to choose from
-                </p>
-                <div class="card-duration">Duration: 4 hours</div>
-              </div>
-            </div>
-            <div class="entertainment-card">
-              <div
-                class="card-image"
-                style="background-image: url('/images/PR (21).JPG')"
-              ></div>
-              <div class="card-content">
-                <h3 class="card-title">Unlimited Drinks</h3>
-                <p class="card-description">
-                  Unlimited drinks for the entire evening with a wide variety of
-                  options to choose from
-                </p>
-                <div class="card-duration">Duration: 4 hours</div>
-              </div>
-            </div>
+            <!-- Cards will be generated dynamically by JavaScript -->
           </div>
         </div>
       </div>
@@ -2409,6 +1992,345 @@
 
       // Mobile Pricing Slider - Auto-Scrolling Effect
       let mobileSliderOffset = 0;
+      // Cruise Highlights Data
+      const cruiseHighlights = [
+        "AC VIP LOunge.png",
+        "Celebration Ready.png",
+        "Couple Friendly.png",
+        "Dance Floor.png",
+        "Family Friendly.png",
+        "Live DJ.png",
+        "Luxury Sailing Cruise.png",
+        "Night Lights.png",
+        "Onboard Bar.png",
+        "Onboard Hookah Counter.png",
+        "Open Deck.png",
+        "Photo Moments.png",
+        "Premium Seating.png",
+        "Romantic Ambience.png",
+        "Safe & Secure.png",
+        "Spacious Washrooms.png",
+        "Triple Deck.png"
+      ];
+
+      // Entertainment Data
+      const entertainmentData = [
+        {
+          image: "Bollywood dance.png",
+          title: "Bollywood Dance",
+          description: "Bollywood dance performances featuring the best of Indian cinema with classic and contemporary songs, choreography, and costumes",
+          duration: "Duration: 30 minutes"
+        },
+        {
+          image: "Tollywood dance.png",
+          title: "Tollywood Dance",
+          description: "Tollywood dance performances featuring the best of Telugu cinema with classic and contemporary songs, choreography, and costumes",
+          duration: "Duration: 30 minutes"
+        },
+        {
+          image: "Games n fun.png",
+          title: "Games and Fun",
+          description: "Interactive games and luxury activities for all age groups with exciting participation, team challenges, and entertainment",
+          duration: "Duration: 40 minutes"
+        },
+        {
+          image: "Live DJ.png",
+          title: "Live DJ",
+          description: "Professional live DJ spinning the hottest international and Bollywood tracks for the entire evening",
+          duration: "All Night Long"
+        },
+        {
+          image: "mrs and miss 2026.png",
+          title: "Mr. & Miss/Mrs. 2026",
+          description: "Glamorous beauty pageant contest to crown the winners of the night with exciting luxury prizes and prestigious recognition",
+          duration: "Grand Finale"
+        },
+        {
+          image: "Spot Prizes.png",
+          title: "Exclusive Spot Prizes",
+          description: "Amazing luxury prizes and premium giveaways for participants aged 1-99 years throughout the evening with surprise rewards",
+          duration: "Multiple Rounds"
+        },
+        {
+          image: "3 deck luxury cruise.png",
+          title: "3 Deck Luxury Cruise",
+          description: "Experience the ultimate luxury on our magnificent triple-deck cruise ship with spacious decks, premium amenities, and breathtaking views",
+          duration: "All Night Long"
+        },
+        {
+          image: "4 Hours Cruising.png",
+          title: "4 Hours Cruising",
+          description: "Enjoy an extended 4-hour cruising experience along the beautiful Goan coastline with stunning sunset and night views",
+          duration: "Duration: 4 hours"
+        },
+        {
+          image: "Firecrackers.png",
+          title: "Firecrackers",
+          description: "Spectacular firecracker display lighting up the night sky as part of the grand New Year celebration with dazzling visual effects",
+          duration: "Midnight Celebration"
+        },
+        {
+          image: "New Year Countdown.png",
+          title: "New Year Countdown",
+          description: "Join the exciting countdown to midnight with live music, cheers, and celebration as we welcome the New Year together",
+          duration: "Midnight Moment"
+        },
+        {
+          image: "Russian Belley dance.png",
+          title: "Russian Belly Dance",
+          description: "Mesmerizing Russian belly dance performances featuring skilled dancers with elegant movements and captivating choreography",
+          duration: "Duration: 25 minutes"
+        },
+        {
+          image: "Sofa Seating.png",
+          title: "Sofa Seating",
+          description: "Comfortable and luxurious sofa seating arrangements for a relaxed and premium experience throughout the cruise",
+          duration: "Available All Night"
+        }
+      ];
+
+      // Culinary Delights Data
+      const culinaryData = [
+        {
+          image: "Accompaniment.png",
+          title: "Accompaniment",
+          description: "Delicious accompaniments and side dishes to complement your main course with a variety of flavors and textures",
+          duration: "Available All Night"
+        },
+        {
+          image: "Buffet Dinner.png",
+          title: "Buffet Dinner",
+          description: "Extensive buffet dinner featuring a wide selection of cuisines, from traditional to international, prepared by expert chefs",
+          duration: "Duration: 4 hours"
+        },
+        {
+          image: "Desserts.png",
+          title: "Desserts",
+          description: "Indulge in a variety of delectable desserts including traditional sweets and international favorites to satisfy your sweet tooth",
+          duration: "Available All Night"
+        },
+        {
+          image: "IMFL Drinks.png",
+          title: "IMFL Drinks",
+          description: "Premium Indian Made Foreign Liquor drinks including whiskey, rum, vodka, and more, served throughout the evening",
+          duration: "Available All Night"
+        },
+        {
+          image: "Non-Veg Starters.png",
+          title: "Non-Veg Starters",
+          description: "Tantalizing non-vegetarian starters featuring a variety of meat and seafood options, perfectly seasoned and cooked to perfection",
+          duration: "Available All Night"
+        },
+        {
+          image: "Soft Drinks.png",
+          title: "Soft Drinks",
+          description: "Refreshing soft drinks and beverages including sodas, juices, and mocktails to keep you hydrated throughout the evening",
+          duration: "Available All Night"
+        },
+        {
+          image: "unlimited soup.png",
+          title: "Unlimited Soup",
+          description: "Warm and comforting unlimited soup options including both vegetarian and non-vegetarian varieties, perfect to start your meal",
+          duration: "Available All Night"
+        },
+        {
+          image: "unlimited veg starters.png",
+          title: "Unlimited Veg Starters",
+          description: "Crispy and flavorful unlimited vegetarian starters featuring a variety of appetizers, snacks, and finger foods",
+          duration: "Available All Night"
+        }
+      ];
+
+      // Function to generate title from filename
+      function getTitleFromFilename(filename) {
+        // Remove .png extension
+        let title = filename.replace('.png', '');
+        // Handle special cases like "LOunge" -> "Lounge"
+        title = title.replace('LOunge', 'Lounge');
+        // Handle "n" -> "and" in cases like "Games n fun"
+        title = title.replace(/\sn\s/g, ' & ');
+        return title;
+      }
+
+      // Function to create a price card element
+      function createPriceCard(imageFilename) {
+        const card = document.createElement('div');
+        card.className = 'price-card';
+        const imagePath = `../img/newYearImgs/Cruise Highlights/${imageFilename}`;
+        card.style.backgroundImage = `url('${imagePath}')`;
+        
+        const title = document.createElement('h3');
+        title.className = 'price-title';
+        title.textContent = getTitleFromFilename(imageFilename);
+        
+        const amount = document.createElement('div');
+        amount.className = 'price-amount';
+        
+        const subtitle = document.createElement('p');
+        subtitle.className = 'price-subtitle';
+        
+        card.appendChild(title);
+        card.appendChild(amount);
+        card.appendChild(subtitle);
+        
+        return card;
+      }
+
+      // Function to populate slider with cards
+      function populateSlider(sliderId) {
+        const slider = document.getElementById(sliderId);
+        if (!slider) return;
+        
+        slider.innerHTML = ''; // Clear existing content
+        
+        cruiseHighlights.forEach(imageFilename => {
+          const card = createPriceCard(imageFilename);
+          slider.appendChild(card);
+        });
+      }
+
+      // Initialize cards for both sliders
+      function initializeCruiseHighlightCards() {
+        populateSlider('pricingSliderDesktop');
+        populateSlider('pricingSliderMobile');
+      }
+
+      // Function to create an entertainment card element
+      function createEntertainmentCard(item) {
+        const card = document.createElement('div');
+        card.className = 'entertainment-card';
+        
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'card-image';
+        const imagePath = `../img/newYearImgs/entertainment/${item.image}`;
+        imageDiv.style.backgroundImage = `url('${imagePath}')`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+        
+        const title = document.createElement('h3');
+        title.className = 'card-title';
+        title.textContent = item.title;
+        
+        const description = document.createElement('p');
+        description.className = 'card-description';
+        description.textContent = item.description;
+        
+        const duration = document.createElement('div');
+        duration.className = 'card-duration';
+        duration.textContent = item.duration;
+        
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(description);
+        contentDiv.appendChild(duration);
+        
+        card.appendChild(imageDiv);
+        card.appendChild(contentDiv);
+        
+        return card;
+      }
+
+      // Function to populate entertainment grid
+      function populateEntertainmentGrid() {
+        const grid = document.querySelector('.entertainment-grid-desktop');
+        if (!grid) return;
+        
+        grid.innerHTML = ''; // Clear existing content
+        
+        entertainmentData.forEach(item => {
+          const card = createEntertainmentCard(item);
+          grid.appendChild(card);
+        });
+      }
+
+      // Function to populate entertainment slider
+      function populateEntertainmentSlider() {
+        const slider = document.getElementById('entertainmentSlider');
+        if (!slider) return;
+        
+        slider.innerHTML = ''; // Clear existing content
+        
+        entertainmentData.forEach(item => {
+          const card = createEntertainmentCard(item);
+          slider.appendChild(card);
+        });
+      }
+
+      // Initialize entertainment cards
+      function initializeEntertainmentCards() {
+        populateEntertainmentGrid();
+        populateEntertainmentSlider();
+      }
+
+      // Function to create a culinary card element
+      function createCulinaryCard(item) {
+        const card = document.createElement('div');
+        card.className = 'entertainment-card';
+        
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'card-image';
+        const imagePath = `../img/newYearImgs/culinary delights/${item.image}`;
+        imageDiv.style.backgroundImage = `url('${imagePath}')`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+        
+        const title = document.createElement('h3');
+        title.className = 'card-title';
+        title.textContent = item.title;
+        
+        const description = document.createElement('p');
+        description.className = 'card-description';
+        description.textContent = item.description;
+        
+        const duration = document.createElement('div');
+        duration.className = 'card-duration';
+        duration.textContent = item.duration;
+        
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(description);
+        contentDiv.appendChild(duration);
+        
+        card.appendChild(imageDiv);
+        card.appendChild(contentDiv);
+        
+        return card;
+      }
+
+      // Function to populate culinary grid (desktop)
+      function populateCulinaryGrid() {
+        // Find the culinary grid - it's the second entertainment-grid-desktop (after entertainment section)
+        const grids = document.querySelectorAll('.entertainment-grid-desktop');
+        const culinaryGrid = grids[1]; // Second grid is the culinary one
+        if (!culinaryGrid) return;
+        
+        culinaryGrid.innerHTML = ''; // Clear existing content
+        
+        culinaryData.forEach(item => {
+          const card = createCulinaryCard(item);
+          culinaryGrid.appendChild(card);
+        });
+      }
+
+      // Function to populate culinary slider (mobile)
+      function populateCulinarySlider() {
+        const slider = document.getElementById('culinarySlider');
+        if (!slider) return;
+        
+        slider.innerHTML = ''; // Clear existing content
+        
+        culinaryData.forEach(item => {
+          const card = createCulinaryCard(item);
+          slider.appendChild(card);
+        });
+      }
+
+      // Initialize culinary cards
+      function initializeCulinaryCards() {
+        populateCulinaryGrid();
+        populateCulinarySlider();
+      }
+
       let mobileSliderInterval;
       let mobileCardWidth = 0;
       let mobileGap = 20;
@@ -2465,42 +2387,79 @@
         mobileSliderInterval = setInterval(animateMobilePricingSlider, 16); // ~60fps
       }
 
-      // Initialize desktop pricing slider
-      if (document.getElementById("pricingSliderDesktop")) {
+      // Initialize cruise highlight cards first, then initialize sliders
+      function initAllSliders() {
+        // Generate cards first
+        initializeCruiseHighlightCards();
+        initializeEntertainmentCards();
+        initializeCulinaryCards();
+        
+        // Wait a bit for DOM to update, then initialize sliders
         setTimeout(() => {
-          initDesktopPricingSlider();
-          startDesktopPricingSlider();
+          // Initialize desktop pricing slider
+          if (document.getElementById("pricingSliderDesktop")) {
+            initDesktopPricingSlider();
+            startDesktopPricingSlider();
 
-          // Pause on hover for better UX
-          const sliderWrapper = document.querySelector(".pricing-slider-desktop");
-          if (sliderWrapper) {
-            sliderWrapper.addEventListener("mouseenter", () => {
-              clearInterval(desktopSliderInterval);
-            });
-            sliderWrapper.addEventListener("mouseleave", () => {
-              startDesktopPricingSlider();
-            });
+            // Pause on hover for better UX
+            const sliderWrapper = document.querySelector(".pricing-slider-desktop");
+            if (sliderWrapper) {
+              sliderWrapper.addEventListener("mouseenter", () => {
+                clearInterval(desktopSliderInterval);
+              });
+              sliderWrapper.addEventListener("mouseleave", () => {
+                startDesktopPricingSlider();
+              });
+            }
+          }
+
+          // Initialize mobile pricing slider
+          if (document.getElementById("pricingSliderMobile")) {
+            initMobilePricingSlider();
+            startMobilePricingSlider();
+
+            // Pause on touch for better UX
+            const sliderWrapper = document.querySelector(".pricing-slider-mobile");
+            if (sliderWrapper) {
+              sliderWrapper.addEventListener("touchstart", () => {
+                clearInterval(mobileSliderInterval);
+              });
+              sliderWrapper.addEventListener("touchend", () => {
+                setTimeout(() => startMobilePricingSlider(), 1000);
+              });
+            }
           }
         }, 100);
+        
+        // Initialize entertainment slider after cards are generated
+        setTimeout(() => {
+          if (document.getElementById("entertainmentSlider")) {
+            initEntertainmentSlider();
+            // Set initial position
+            slideToIndex(0);
+          }
+          
+          // Initialize culinary slider after cards are generated
+          if (document.getElementById("culinarySlider")) {
+            initCulinarySlider();
+            // Set initial position for culinary slider
+            slideCulinaryToIndex(0);
+          }
+        }, 200);
       }
 
-      // Initialize mobile pricing slider
-      if (document.getElementById("pricingSliderMobile")) {
-        setTimeout(() => {
-          initMobilePricingSlider();
-          startMobilePricingSlider();
+      // Call initialization when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAllSliders);
+      } else {
+        initAllSliders();
+      }
 
-          // Pause on touch for better UX
-          const sliderWrapper = document.querySelector(".pricing-slider-mobile");
-          if (sliderWrapper) {
-            sliderWrapper.addEventListener("touchstart", () => {
-              clearInterval(mobileSliderInterval);
-            });
-            sliderWrapper.addEventListener("touchend", () => {
-              setTimeout(() => startMobilePricingSlider(), 1000);
-            });
-          }
-        }, 100);
+      // Call initialization when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAllSliders);
+      } else {
+        initAllSliders();
       }
 
       // Entertainment Slider - Mobile Touch/Swipe
@@ -2690,32 +2649,23 @@
         slider.style.transform = `translateX(${offset}px)`;
       }
 
-      // Initialize entertainment slider
-      if (document.getElementById("entertainmentSlider")) {
-        setTimeout(() => {
-          initEntertainmentSlider();
-          
-          // Set initial position
-          slideToIndex(0);
-          
-          // Recalculate on resize
-          let resizeTimeout;
-          window.addEventListener("resize", () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-              const slider = document.getElementById("entertainmentSlider");
-              if (slider) {
-                const cards = slider.querySelectorAll(".entertainment-card");
-                if (cards.length > 0) {
-                  const firstCard = cards[0];
-                  entertainmentCardWidth = firstCard.offsetWidth + entertainmentGap;
-                  slideToIndex(entertainmentCurrentIndex);
-                }
-              }
-            }, 250);
-          });
-        }, 100);
-      }
+      // Entertainment slider initialization is now handled in initAllSliders()
+      // Recalculate on resize
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const slider = document.getElementById("entertainmentSlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (cards.length > 0) {
+              const firstCard = cards[0];
+              entertainmentCardWidth = firstCard.offsetWidth + entertainmentGap;
+              slideToIndex(entertainmentCurrentIndex);
+            }
+          }
+        }, 250);
+      });
 
       // Culinary Slider - Mobile Touch/Swipe (same functionality as entertainment)
       let culinarySlider = null;
@@ -2900,30 +2850,23 @@
         slider.style.transform = `translateX(${offset}px)`;
       }
 
-      // Initialize culinary slider
-      if (document.getElementById("culinarySlider")) {
-        setTimeout(() => {
-          initCulinarySlider();
-          slideCulinaryToIndex(0);
-          
-          // Recalculate on resize
-          let resizeTimeout;
-          window.addEventListener("resize", () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-              const slider = document.getElementById("culinarySlider");
-              if (slider) {
-                const cards = slider.querySelectorAll(".entertainment-card");
-                if (cards.length > 0) {
-                  const firstCard = cards[0];
-                  culinaryCardWidth = firstCard.offsetWidth + culinaryGap;
-                  slideCulinaryToIndex(culinaryCurrentIndex);
-                }
-              }
-            }, 250);
-          });
-        }, 100);
-      }
+      // Culinary slider initialization is now handled in initAllSliders()
+      // Recalculate on resize
+      let culinaryResizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(culinaryResizeTimeout);
+        culinaryResizeTimeout = setTimeout(() => {
+          const slider = document.getElementById("culinarySlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (cards.length > 0) {
+              const firstCard = cards[0];
+              culinaryCardWidth = firstCard.offsetWidth + culinaryGap;
+              slideCulinaryToIndex(culinaryCurrentIndex);
+            }
+          }
+        }, 250);
+      });
 
       // Beverage Slider - Mobile Touch/Swipe
       let beverageCurrentIndex = 0;
