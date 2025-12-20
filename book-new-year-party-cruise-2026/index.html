@@ -764,7 +764,7 @@
 
     /* Pricing Section */
     .pricing-section {
-      padding: 120px 20px;
+      padding: 60px 20px;
       background: linear-gradient(135deg,
           #0a0a0a 0%,
           #1a1a1a 50%,
@@ -943,6 +943,8 @@
       background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
       border-radius: 20px;
       height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .package-row {
@@ -972,6 +974,38 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
+    .package-book-button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 18px 30px;
+      background: linear-gradient(135deg,
+          #ffd700 0%,
+          #ffed4e 50%,
+          #ffd700 100%);
+      color: #000;
+      font-family: "Alice", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      display: block;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .package-book-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+      background: linear-gradient(135deg,
+          #ffed4e 0%,
+          #ffd700 50%,
+          #ffed4e 100%);
+    }
+
     .reserved-table-text {
       text-align: center;
       color: #ffffff;
@@ -985,7 +1019,7 @@
 
     /* Booking Section */
     .booking-section {
-      padding: 120px 20px;
+      padding: 60px 20px;
       background: linear-gradient(135deg,
           rgba(255, 215, 0, 0.05),
           rgba(0, 0, 0, 0.95));
@@ -1687,6 +1721,14 @@
               <span class="package-label">KIDS(5-12)</span>
               <span class="package-price">₹2999/-</span>
             </div>
+            <div class="package-row">
+              <span class="package-label">KIDS(BELOW 5)</span>
+              <span class="package-price">FREE</span>
+            </div>
+              <a href="https://bookings.nautiamigo.com/special-days/details/book-nauti-amigo-cruise-premium-in-goa"
+              target="_self" class="package-book-button">
+              Book Online
+            </a>
           </div>
         </div>
         <div class="package-card">
@@ -1700,20 +1742,18 @@
               <span class="package-label">KIDS(5-12)</span>
               <span class="package-price">₹2999/-</span>
             </div>
-          </div>
-        </div>
-        <div class="package-card">
-          <div class="package-header">KIDS</div>
-          <div class="package-content">
             <div class="package-row">
               <span class="package-label">KIDS(BELOW 5)</span>
               <span class="package-price">FREE</span>
             </div>
+            <a href="https://bookings.nautiamigo.com/special-days/details/book-nauti-amigo-cruise-luxury-in-goa"
+              target="_self" class="package-book-button">
+              Book Online
+            </a>
           </div>
         </div>
       </div>
-      <div class="reserved-table-text">RESERVED TABLE FOR EVERY BOOKING</div>
-    </div>
+      
   </section>
   <!-- Booking Section -->
   <section class="booking-section" id="booking">
@@ -1742,12 +1782,6 @@
           <a href="https://wa.me/9324105081?text=Hi!%20I%20would%20like%20to%20book%20my%20spot%20for%20the%20New%20Year's%20Eve%20Celebration%20on%20Nauti Amigo%20Cruise."
             target="_blank" class="btn-premium btn-secondary">
             <span>Book on WhatsApp</span>
-          </a>
-
-          <a href="https://bookings.nautiamigo.com/book-dinner-cruise-in-goa/details/book-cruise-in-goa/check-availability"
-            class="btn-premium btn-secondary" id="phone-link">
-            <span>Book Online</span>
-
           </a>
         </div>
       </div>
@@ -3232,6 +3266,48 @@ Please confirm availability and share payment details. Thank you!`;
       document.querySelectorAll(".menu-title").forEach((el) => {
         el.style.fontSize = `${baseSize * 1.56}px`;
       });
+    }
+
+    // Phone number display for web view
+    function setupPhoneNumberDisplay() {
+      const phoneLink = document.getElementById("phone-link");
+      if (!phoneLink) return;
+
+      // Detect if it's a web view (desktop, not mobile)
+      const isWebView = window.innerWidth > 768 && !('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+      if (isWebView) {
+        phoneLink.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const phoneNumber = this.href.replace('tel:', '');
+          const formattedNumber = phoneNumber.replace(/(\+91)(\d{2})(\d{4})(\d{4})/, '$1 $2 $3 $4');
+
+          // Get the span element
+          const span = this.querySelector('span');
+          const originalText = span.textContent;
+
+          // Update the button text with beautified number
+          span.textContent = formattedNumber;
+          span.style.fontSize = '1.5rem';
+          span.style.letterSpacing = '1.5px';
+          span.style.fontWeight = '600';
+
+          // After 3 seconds, revert to original text
+          setTimeout(() => {
+            span.textContent = originalText;
+            span.style.fontSize = '';
+            span.style.letterSpacing = '';
+          }, 3000);
+        });
+      }
+    }
+
+    // Initialize phone number display
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupPhoneNumberDisplay);
+    } else {
+      setupPhoneNumberDisplay();
     }
 
     // Initialize Element SDK
