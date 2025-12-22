@@ -10,6 +10,15 @@ function getBaseUrl() {
   return environment.production ? environment.redirectUrlProd : environment.redirectUrlDev;
 }
 
+// Helper function to calculate discount percentage
+function calculateDiscount(regularPrice, discountPrice) {
+  if (!regularPrice || !discountPrice) return 0;
+  const regular = parseFloat(regularPrice);
+  const discount = parseFloat(discountPrice);
+  if (regular <= 0 || discount >= regular) return 0;
+  return Math.round(((regular - discount) / regular) * 100);
+}
+
 const offer = [
   // Nauti Amigo Cruise(Luxury)
   {
@@ -630,19 +639,26 @@ function renderCruiseCardsCarousel(cruises) {
             </div>
   
             <div class="payments">
-              <div class="amount">
-                <h3>
-                  INR ${offer.currentPrice}
-                  <div class="tag">15% OFF</div>
-                </h3>
+              <div class="amount" style="display: flex; gap: 10px;white-space: nowrap; align-items: center;">
+              <div style="display: flex; gap: 4px;white-space: nowrap; align-items: center;">
+                <span style="text-decoration: line-through;font-size: 12px;font-weight: 400; ">
+                  ₹${offer?.priceDetails?.regularPrice}
+                </span>
+                <h3 style="display: flex; gap: 10px;">
+                  ₹${offer?.priceDetails?.discountPrice}
+                  </h3>
+              </div>
+                  <div class="discount-badge-web">
+                    SAVED ${calculateDiscount(offer?.priceDetails?.regularPrice, offer?.priceDetails?.discountPrice)}%!
+                  </div>
               </div>
               <div class="flex flex-column mobile-reverse">
                 <div class="button-group">
                   <button class="primary-button" onclick="window.location.href='${getBaseUrl()}${offer.routingUrl}'">
-                    Book Now
+                    Book Online
                   </button>
                   <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
-                    Get Details
+                    Book on WhatsApp
                   </button>
                 </div>
                 <div class="features">
@@ -657,12 +673,13 @@ function renderCruiseCardsCarousel(cruises) {
         )
         .join("")}
                 </div>
-                <div class="show-full-info">
-                  <div class="whatsapp link link-cursor" onclick="openWhatsApp('+919324105081')">
-                    <img src="/img/dinnercruise/whatsapp_icon.png"/>
-                    Get more details
-                    <img src="/img/images/svg/arrow-ico.svg" alt="" />
-                  </div>
+                <div class="show-full-info dotted-border">
+                  <div (click)="openWhatsApp('+917715959917', offer.title)" class="whatsapp link link-cursor">
+                <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
+
+                Book on WhatsApp
+                <img src="/img/images/svg/arrow-ico.svg" alt="" />
+              </div>
                 </div>            
               </div>
             </div>
@@ -681,7 +698,7 @@ function renderCruiseCardsCarousel(cruises) {
     nav: false,
     dots: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 6000,
     autoplayHoverPause: true,
   });
 }

@@ -33,6 +33,18 @@ ul {
 #cruise-container .info,.amount{
   text-align: left;
 }
+.discount-badge-web {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(11, 130, 42);
+  background: linear-gradient(90deg, rgba(11, 130, 42, 0.11) 3.64%, rgba(11, 130, 42, 0.1));
+  white-space: nowrap;
+  margin-left: auto;
+  text-align: center;
+}
 .link.link-cursor img{
   width: auto;
 }
@@ -49,6 +61,19 @@ li {
   img {
     height: 16px;
     width: 16px;
+  }
+}
+.dotted-border {
+  display: flex;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  padding-right: 5px !important;
+  width: 240px;
+  margin-top: 20px;
+  div {
+    display: flex;
+    font-size: 16px;
   }
 }
 .accordion-button {
@@ -80,6 +105,10 @@ li {
 }
 .cardImg {
   margin-top: 4px;
+  img {
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 #modal-nav a.active {
@@ -109,6 +138,7 @@ li {
     font-size: 14px;
     margin-left: 12px;
     text-align: left;
+    width: 50%;
   }
 
   .payments {
@@ -400,6 +430,9 @@ svg#star-full-big {
     }
     .cardImg{
         padding:8px ;
+        img {
+          height: 200px;
+        }
     }
   .info {
     margin-left: 0 !important;
@@ -412,6 +445,7 @@ svg#star-full-big {
   }
   .card {
     padding: 0;
+    width: 100%;
     .info {
       margin-top: 24px;
       padding: 0 15px !important;
