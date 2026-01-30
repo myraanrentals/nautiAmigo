@@ -789,6 +789,9 @@ color: #aa8453;
 .section-padding {
     padding: 120px 0;
 }
+.section-padding3 {
+    padding: 90px 0;
+}
 .section-padding2 {
     padding: 0 0 120px 0;
 }
@@ -808,6 +811,9 @@ color: #aa8453;
     position: relative;
     letter-spacing: 2px;
     margin-bottom: 0px;
+}
+.section-subtitle-bigSize{
+    font-size: 18px !important;
 }
 .section-subtitle span {
  color: #aa8453;

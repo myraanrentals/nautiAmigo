@@ -23,12 +23,12 @@ const offer = [
   // Nauti Amigo Cruise(Luxury)
   {
     priceDetails: {
-      regularPrice: '7000',
-      discountPrice: '3999',
+      regularPrice: '3000',
+      discountPrice: '2499',
     },
     cruiseId: 5,
-    title: 'Nauti Amigo Cruise(Luxury)',
-    subTile: 'Nauti Amigo Cruise(Luxury)',
+    title: 'SILVER SAIL EXPERIENCE',
+    subTile: 'SILVER SAIL EXPERIENCE',
     category: 'Cruise',
     type: ['luxury'],
     specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
@@ -36,12 +36,12 @@ const offer = [
     rating: '4.8',
     reviews: '3.8K',
     mobilePackageDesc: ['2 hours', 'Panjim '],
-    oldPrice: '4999',
+    oldPrice: '3000',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 3000,
     reportPriceWithTransport: 750,
-    currentPrice: '3299',
+    currentPrice: '2499',
     image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
     bannerImgs: [
       '/img/DinnerCruises/Nauti AMigo/i2.webp',
@@ -214,28 +214,27 @@ const offer = [
       },
     ],
   },
-  // Nauti Amigo Cruise(Premium)
   {
     priceDetails: {
-      regularPrice: '5000',
-      discountPrice: '3499',
+      regularPrice: '3500',
+      discountPrice: '2999',
     },
     cruiseId: 5,
-    title: 'Nauti Amigo Cruise(Premium)',
-    subTile: 'Nauti Amigo Cruise(Premium)',
+    title: 'GOLDEN HORIZON PACKAGE',
+    subTile: 'GOLDEN HORIZON PACKAGE',
     category: 'Cruise',
     type: ['luxury'],
     specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
-    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-premium-in-goa',
+    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-luxury-in-goa',
     rating: '4.8',
     reviews: '3.8K',
     mobilePackageDesc: ['2 hours', 'Panjim '],
-    oldPrice: '4999',
+    oldPrice: '3500',
     booked: '4M+',
     buttonText: 'Book this activity & get 20% off',
     reportPrice: 3000,
     reportPriceWithTransport: 750,
-    currentPrice: '3299',
+    currentPrice: '2999',
     image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
     bannerImgs: [
       '/img/DinnerCruises/Nauti AMigo/i2.webp',
@@ -302,203 +301,15 @@ const offer = [
 
     features: [
       {
-        name: 'Duration 3 Hours',
-        image: '/img/images/svg/cancellation-ico.svg',
+        name: "Duration 3 Hours",
+        image: "/img/images/svg/cancellation-ico.svg",
       },
       {
-        name: 'Panjim Goa, India',
-        image: '/img/images/svg/bolt-ico.svg',
+        name: "Panjim Goa, India",
+        image: "/img/images/svg/bolt-ico.svg",
       },
-      { name: 'Meals & Drinks', image: '/img/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: '/img/images/svg/transfer-ico.svg' },
-    ],
-    highlights: [
-      {
-        highlights1:
-          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
-      },
-      {
-        highlights1:
-          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
-      },
-      {
-        highlights1:
-          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
-      },
-      {
-        highlights1:
-          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
-      },
-    ],
-    overviewDesc:
-      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
-    overview: [
-      { inclusion1: '2-hour mandovi cruise' },
-      { inclusion1: 'Buffet dinner' },
-      { inclusion1: 'Welcome drinks' },
-      { inclusion1: 'Soft drinks & water' },
-      { inclusion1: 'Goan dance show' },
-      { inclusion1: 'Hotel transfers (optional upgrade)' },
-    ],
-    thingsToCarry: [
-      { exclusion1: 'Parking charges are not included in the package.' },
-      {
-        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
-      },
-      {
-        exclusion1:
-          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
-      },
-    ],
-    needToKnows: [
-      {
-        needToKnow:
-          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
-      },
-      {
-        needToKnow:
-          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
-      },
-      {
-        needToKnow:
-          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
-      },
-    ],
-    transport: [
-      {
-        title: 'Without Transport',
-        isSelected: true,
-        originalamt: '4999',
-        discountedamt: '3999',
-        kidAmt: '2500',
-        regularPrice: '5000',
-        adultPrice: '3499',
-        kidPrice: '1999',
-        adultReportPrice: '2500',
-        kidReportPrice: '1500',
-        desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-      {
-        title: 'With Transport',
-        isSelected: false,
-        originalamt: '4999',
-        discountedamt: '3999',
-        kidAmt: '2500',
-        regularPrice: '5500',
-        adultPrice: '3999',
-        kidPrice: '2499',
-        adultReportPrice: '3000',
-        kidReportPrice: '2000',
-        desc: [
-          'Access to all decks',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
-        ],
-      },
-    ],
-  },
-  // Candlelight Dinner Cruise
-  {
-    priceDetails: {
-      regularPrice: '7000',
-      discountPrice: '4999',
-    },
-    cruiseId: 5,
-    title: 'Candlelight Dinner Cruise',
-    subTile: 'Candlelight Dinner Cruise',
-    category: 'Cruise',
-    type: ['romantic'],
-    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-luxury-dinner-cruise-in-goa',
-    rating: '4.8',
-    reviews: '3.8K',
-    mobilePackageDesc: ['2 hours', 'Panjim '],
-    oldPrice: '8000',
-    booked: '4M+',
-    buttonText: 'Book this activity & get 20% off',
-    reportPrice: 3000,
-    reportPriceWithTransport: 750,
-    currentPrice: '4999',
-    image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
-    bannerImgs: [
-      '/img/DinnerCruises/Nauti AMigo/i2.webp',
-      '/img/DinnerCruises/Nauti AMigo/i6.webp',
-      '/img/DinnerCruises/Nauti AMigo/i3.webp',
-      '/img/DinnerCruises/Nauti AMigo/i4.webp',
-      '/img/DinnerCruises/Nauti AMigo/i5.webp',
-    ],
-    priceIncludes: {
-      title: 'Price Includes',
-      sections: [
-        {
-          category: 'Ticket',
-          items: [
-            '2 Hours Cruising on Mandovi River',
-            'Dance Performances & Entertainment on Board',
-          ],
-        },
-        {
-          category: 'Meals',
-          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
-        },
-        {
-          category: 'Activities',
-          items: ['Sightseeing of Panjim City'],
-        },
-      ],
-    },
-    topFeatures: [
-      {
-        icon: 'event_available',
-        title: 'Instant Confirmation',
-        description: 'Get your tickets mailed right away',
-      },
-      {
-        icon: 'free_cancellation',
-        title: 'Free Cancellation',
-        description: 'Up to 48 hours before the experience starts',
-      },
-      {
-        icon: 'local_activity',
-        title: 'Mobile Tickets',
-        description: 'Get tickets delivered to your Inbox',
-      },
-    ],
-    mustKnow: [
-      {
-        about1:
-          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
-      },
-      {
-        about1:
-          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
-      },
-      {
-        about1:
-          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
-      },
-      {
-        about1:
-          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
-      },
-    ],
-
-    features: [
-      {
-        name: 'Duration 3 Hours',
-        image: '/img/images/svg/cancellation-ico.svg',
-      },
-      {
-        name: 'Panjim Goa, India',
-        image: '/img/images/svg/bolt-ico.svg',
-      },
-      { name: 'Meals & Drinks', image: '/img/images/svg/mobile-ico.svg' },
-      { name: 'Transport', image: '/img/images/svg/transfer-ico.svg' },
+      { name: "Meals & Drinks", image: "/img/images/svg/mobile-ico.svg" },
+      { name: "Transport", image: "/img/images/svg/transfer-ico.svg" },
     ],
     highlights: [
       {
@@ -560,15 +371,17 @@ const offer = [
         discountedamt: '3999',
         kidAmt: '2500',
         regularPrice: '7000',
-        adultPrice: '4999',
+        adultPrice: '3999',
         kidPrice: '1999',
-        adultReportPrice: '4000',
+        adultReportPrice: '3000',
         kidReportPrice: '1500',
         desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
         ],
       },
       {
@@ -578,20 +391,795 @@ const offer = [
         discountedamt: '3999',
         kidAmt: '2500',
         regularPrice: '7500',
-        adultPrice: '5499',
+        adultPrice: '4499',
         kidPrice: '2499',
-        adultReportPrice: '4500',
+        adultReportPrice: '3000',
         kidReportPrice: '2000',
         desc: [
-          'Access to lower deck',
-          '2-hour cruise in Goa Marina',
-          'Goan buffet dinner.',
-          'Goan dance show',
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
         ],
       },
     ],
   },
-];
+  {
+    priceDetails: {
+      regularPrice: '4000',
+      discountPrice: '3499',
+    },
+    cruiseId: 5,
+    title: 'PLATINUM INFINITY EXPERIENCE',
+    subTile: 'PLATINUM INFINITY EXPERIENCE',
+    category: 'Cruise',
+    type: ['luxury'],
+    specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
+    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-luxury-in-goa',
+    rating: '4.8',
+    reviews: '3.8K',
+    mobilePackageDesc: ['2 hours', 'Panjim '],
+    oldPrice: '4000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 3000,
+    reportPriceWithTransport: 750,
+    currentPrice: '3499',
+    image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
+    bannerImgs: [
+      '/img/DinnerCruises/Nauti AMigo/i2.webp',
+      '/img/DinnerCruises/Nauti AMigo/i6.webp',
+      '/img/DinnerCruises/Nauti AMigo/i3.webp',
+      '/img/DinnerCruises/Nauti AMigo/i4.webp',
+      '/img/DinnerCruises/Nauti AMigo/i5.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+      },
+      {
+        about1:
+          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+      },
+      {
+        about1:
+          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+      },
+      {
+        about1:
+          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+      },
+    ],
+
+    features: [
+      {
+        name: "Duration 3 Hours",
+        image: "/img/images/svg/cancellation-ico.svg",
+      },
+      {
+        name: "Panjim Goa, India",
+        image: "/img/images/svg/bolt-ico.svg",
+      },
+      { name: "Meals & Drinks", image: "/img/images/svg/mobile-ico.svg" },
+      { name: "Transport", image: "/img/images/svg/transfer-ico.svg" },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7000',
+        adultPrice: '3999',
+        kidPrice: '1999',
+        adultReportPrice: '3000',
+        kidReportPrice: '1500',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7500',
+        adultPrice: '4499',
+        kidPrice: '2499',
+        adultReportPrice: '3000',
+        kidReportPrice: '2000',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
+        ],
+      },
+    ],
+  },
+  {
+    priceDetails: {
+      regularPrice: '5000',
+      discountPrice: '4499',
+    },
+    cruiseId: 5,
+    title: 'CANDLELIGHT DINNER PACKAGE',
+    subTile: 'CANDLELIGHT DINNER PACKAGE',
+    category: 'Cruise',
+    type: ['luxury'],
+    specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
+    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-luxury-in-goa',
+    rating: '4.8',
+    reviews: '3.8K',
+    mobilePackageDesc: ['2 hours', 'Panjim '],
+    oldPrice: '5000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 3000,
+    reportPriceWithTransport: 750,
+    currentPrice: '4499',
+    image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
+    bannerImgs: [
+      '/img/DinnerCruises/Nauti AMigo/i2.webp',
+      '/img/DinnerCruises/Nauti AMigo/i6.webp',
+      '/img/DinnerCruises/Nauti AMigo/i3.webp',
+      '/img/DinnerCruises/Nauti AMigo/i4.webp',
+      '/img/DinnerCruises/Nauti AMigo/i5.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+      },
+      {
+        about1:
+          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+      },
+      {
+        about1:
+          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+      },
+      {
+        about1:
+          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+      },
+    ],
+
+    features: [
+      {
+        name: "Duration 3 Hours",
+        image: "/img/images/svg/cancellation-ico.svg",
+      },
+      {
+        name: "Panjim Goa, India",
+        image: "/img/images/svg/bolt-ico.svg",
+      },
+      { name: "Meals & Drinks", image: "/img/images/svg/mobile-ico.svg" },
+      { name: "Transport", image: "/img/images/svg/transfer-ico.svg" },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7000',
+        adultPrice: '3999',
+        kidPrice: '1999',
+        adultReportPrice: '3000',
+        kidReportPrice: '1500',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7500',
+        adultPrice: '4499',
+        kidPrice: '2499',
+        adultReportPrice: '3000',
+        kidReportPrice: '2000',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
+        ],
+      },
+    ],
+  },
+  {
+    priceDetails: {
+      regularPrice: '1000',
+      discountPrice: '699',
+    },
+    cruiseId: 5,
+    title: 'LUXURY SUNDOWNER TRIP',
+    subTile: 'LUXURY SUNDOWNER TRIP',
+    category: 'Cruise',
+    type: ['luxury'],
+    specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
+    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-luxury-in-goa',
+    rating: '4.8',
+    reviews: '3.8K',
+    mobilePackageDesc: ['2 hours', 'Panjim '],
+    oldPrice: '1000',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 3000,
+    reportPriceWithTransport: 750,
+    currentPrice: '699',
+    image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
+    bannerImgs: [
+      '/img/DinnerCruises/Nauti AMigo/i2.webp',
+      '/img/DinnerCruises/Nauti AMigo/i6.webp',
+      '/img/DinnerCruises/Nauti AMigo/i3.webp',
+      '/img/DinnerCruises/Nauti AMigo/i4.webp',
+      '/img/DinnerCruises/Nauti AMigo/i5.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+      },
+      {
+        about1:
+          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+      },
+      {
+        about1:
+          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+      },
+      {
+        about1:
+          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+      },
+    ],
+
+    features: [
+      {
+        name: "Duration 3 Hours",
+        image: "/img/images/svg/cancellation-ico.svg",
+      },
+      {
+        name: "Panjim Goa, India",
+        image: "/img/images/svg/bolt-ico.svg",
+      },
+      { name: "Meals & Drinks", image: "/img/images/svg/mobile-ico.svg" },
+      { name: "Transport", image: "/img/images/svg/transfer-ico.svg" },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7000',
+        adultPrice: '3999',
+        kidPrice: '1999',
+        adultReportPrice: '3000',
+        kidReportPrice: '1500',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7500',
+        adultPrice: '4499',
+        kidPrice: '2499',
+        adultReportPrice: '3000',
+        kidReportPrice: '2000',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
+        ],
+      },
+    ],
+  },
+  {
+    priceDetails: {
+      regularPrice: '1.5L',
+      discountPrice: '1.5L',
+    },
+    cruiseId: 5,
+    title: 'PRIVATE EVENTS',
+    subTile: 'PRIVATE EVENTS',
+    category: 'Cruise',
+    type: ['luxury'],
+    specialEvents: [{ date: '2025-12-31', title: 'New Year\'s Eve', navigateTo: 'https://nautiamigo.com/book-new-year-party-cruise-2026/' }],
+    routingUrl: 'book-dinner-cruise-in-goa/details/book-nauti-amigo-cruise-luxury-in-goa',
+    rating: '4.8',
+    reviews: '3.8K',
+    mobilePackageDesc: ['2 hours', 'Panjim '],
+    oldPrice: '149999/Hr',
+    booked: '4M+',
+    buttonText: 'Book this activity & get 20% off',
+    reportPrice: 3000,
+    reportPriceWithTransport: 750,
+    currentPrice: '129999/Hr',
+    image: '/img/DinnerCruises/Nauti AMigo/i1.webp',
+    bannerImgs: [
+      '/img/DinnerCruises/Nauti AMigo/i2.webp',
+      '/img/DinnerCruises/Nauti AMigo/i6.webp',
+      '/img/DinnerCruises/Nauti AMigo/i3.webp',
+      '/img/DinnerCruises/Nauti AMigo/i4.webp',
+      '/img/DinnerCruises/Nauti AMigo/i5.webp',
+    ],
+    priceIncludes: {
+      title: 'Price Includes',
+      sections: [
+        {
+          category: 'Ticket',
+          items: [
+            '2 Hours Cruising on Mandovi River',
+            'Dance Performances & Entertainment on Board',
+          ],
+        },
+        {
+          category: 'Meals',
+          items: ['Starter', 'Buffet Dinner (Veg/Non-Veg)', 'Complimentary Dinks & Snacks'],
+        },
+        {
+          category: 'Activities',
+          items: ['Sightseeing of Panjim City'],
+        },
+      ],
+    },
+    topFeatures: [
+      {
+        icon: 'event_available',
+        title: 'Instant Confirmation',
+        description: 'Get your tickets mailed right away',
+      },
+      {
+        icon: 'free_cancellation',
+        title: 'Free Cancellation',
+        description: 'Up to 48 hours before the experience starts',
+      },
+      {
+        icon: 'local_activity',
+        title: 'Mobile Tickets',
+        description: 'Get tickets delivered to your Inbox',
+      },
+    ],
+    mustKnow: [
+      {
+        about1:
+          'Triple-Deck Luxury Vessel: Nauti Amigo is a five-star luxury cruise spread across three decks, each designed to provide a unique experience.',
+      },
+      {
+        about1:
+          'Exclusive VVIP lounge with sofa seating, Open-Air Dance Floor, a bar counter, advanced lighting and sound systems, a DJ booth, and separate restrooms for men and women, ensuring utmost comfort and exclusivity.',
+      },
+      {
+        about1:
+          'Gourmet Dining Experience: Guests can indulge in a sumptuous dinner accompanied soups, starters & unlimited alcoholic and non-alcoholic beverages.',
+      },
+      {
+        about1:
+          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+      },
+    ],
+
+    features: [
+      {
+        name: "Duration 3 Hours",
+        image: "/img/images/svg/cancellation-ico.svg",
+      },
+      {
+        name: "Panjim Goa, India",
+        image: "/img/images/svg/bolt-ico.svg",
+      },
+      { name: "Meals & Drinks", image: "/img/images/svg/mobile-ico.svg" },
+      { name: "Transport", image: "/img/images/svg/transfer-ico.svg" },
+    ],
+    highlights: [
+      {
+        highlights1:
+          'Cruise along Dubai Marina on a classic wooden dhow. This 2-hour cruise has it all: sightseeing, dinner, and live entertainment.',
+      },
+      {
+        highlights1:
+          'Feast on an all-you-can-eat buffet with Asian delights, Indian curries, and desserts - the buffet for everyone, veg or not!',
+      },
+      {
+        highlights1:
+          'See the Marina light up with sights like the Cayan Tower, Ain Dubai, and the posh yachts - all set against the backdrop of newly reclaimed islands',
+      },
+      {
+        highlights1:
+          'This cruise ups the game with a live Tanoura dance on Arabic and Hindi tunes and a true Emirati welcome with drinks and dates.',
+      },
+    ],
+    overviewDesc:
+      'The 2.5-hour dinner cruise on the Mandovi River in Goa offers an extraordinary experience, blending scenic beauty with culinary delights….',
+    overview: [
+      { inclusion1: '2-hour mandovi cruise' },
+      { inclusion1: 'Buffet dinner' },
+      { inclusion1: 'Welcome drinks' },
+      { inclusion1: 'Soft drinks & water' },
+      { inclusion1: 'Goan dance show' },
+      { inclusion1: 'Hotel transfers (optional upgrade)' },
+    ],
+    thingsToCarry: [
+      { exclusion1: 'Parking charges are not included in the package.' },
+      {
+        exclusion1: 'Additional drinks are not included but can be purchased onboard.',
+      },
+      {
+        exclusion1:
+          'Self-travel dinner cruise packages do not include pickup and drop-off services.',
+      },
+    ],
+    needToKnows: [
+      {
+        needToKnow:
+          'Tip: For the best views, secure a spot near the railings of the Dhow. You will get an unobstructed view of the marina and the city landmarks.',
+      },
+      {
+        needToKnow:
+          'Note: Seat allocation is done by the staff on a first-come, first-served basis',
+      },
+      {
+        needToKnow:
+          'The pick-up time for the Dhow cruise with transfer is scheduled between 6-7pm, varying by area (limited to Deira, Bur Dubai, and Sheikh Zayed Road till Barsha). The exact pick-up time will be confirmed by 5pm on the tour day.',
+      },
+    ],
+    transport: [
+      {
+        title: 'Without Transport',
+        isSelected: true,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7000',
+        adultPrice: '3999',
+        kidPrice: '1999',
+        adultReportPrice: '3000',
+        kidReportPrice: '1500',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+        ],
+      },
+      {
+        title: 'With Transport',
+        isSelected: false,
+        originalamt: '4999',
+        discountedamt: '3999',
+        kidAmt: '2500',
+        regularPrice: '7500',
+        adultPrice: '4499',
+        kidPrice: '2499',
+        adultReportPrice: '3000',
+        kidReportPrice: '2000',
+        desc: [
+          'Access to all decks',
+          '3-hour sailing',
+          'Unlimited starters.',
+          'Unlimited buffet dinner.',
+          'Unlimited drinks.',
+          'Unlimited entertainment.',
+          'Transfers',
+        ],
+      },
+    ],
+  },
+ ];
 
 function renderCruiseCardsCarousel(cruises) {
   const container = $("#cruise-container");
@@ -773,18 +1361,19 @@ function renderCruiseCards(cruises, containerId = "cruise-container") {
   
             <div class="payments">
               <div class="amount">
-                <h3>
-                  INR ${offer.currentPrice}
-                  <div class="tag">15% OFF</div>
+                <h3 class="price-div">
+                <span class="old-price"> ₹${offer?.priceDetails?.regularPrice}</span>
+              <span class="amount-price">₹${offer.currentPrice}</span>
+                  <div class="tag"> SAVED 15%</div>
                 </h3>
               </div>
               <div class="flex flex-column mobile-reverse">
                 <div class="button-group">
-                  <button class="primary-button" onclick="window.location.href='${getBaseUrl()}${offer.routingUrl}'">
-                    Book Now
+                  <button class="primary-button" onclick="window.location.href='tel:9324105081'">
+                    Call Now
                   </button>
                   <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
-                    Get Details
+                    Book on WhatsApp
                   </button>
                 </div>
                 <div class="features">
@@ -799,12 +1388,13 @@ function renderCruiseCards(cruises, containerId = "cruise-container") {
         )
         .join("")}
                 </div>
-                <div class="show-full-info">
-                  <div class="whatsapp link link-cursor" onclick="openWhatsApp('+919324105081')">
-                    <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
-                    Get more details
-                    <img src="/img/images/svg/arrow-ico.svg" alt="" />
-                  </div>
+                <div class="show-full-info dotted-border">
+                  <div (click)="openWhatsApp('+917715959917', offer.title)" class="whatsapp link link-cursor">
+                <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
+
+                Book on WhatsApp
+                <img src="/img/images/svg/arrow-ico.svg" alt="" />
+              </div>
                 </div>            
               </div>
             </div>

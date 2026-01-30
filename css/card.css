@@ -26,6 +26,12 @@ ul {
   padding-left: 18px;
   margin-top: 10px;
 }
+li {
+  list-style: circle;
+  line-height: 24px;
+  font-size: 13px;
+}
+
  #cruise-container  ul li{
   list-style: circle !important;
   text-align: left;
@@ -49,7 +55,7 @@ ul {
   width: auto;
 }
 li {
-  list-style: none;
+  list-style: circle;
   line-height: 24px;
   font-size: 13px;
 }
@@ -297,19 +303,29 @@ svg#star-full-big {
   }
 }
 
-.tag {
-  background: #088943;
-  border-radius: 0 3px 3px 0;
-  color: #fff;
-  display: inline-block;
-  height: 20px;
-  line-height: 20px;
-  padding: 0 5px 0 12px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  font-size: 13px;
+.tag  {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: rgb(11, 130, 42);
+  background: linear-gradient(90deg, rgba(11, 130, 42, 0.11) 3.64%, rgba(11, 130, 42, 0.1));
   white-space: nowrap;
+  margin-left:auto;
+  text-align: center;
+}
+.price-div {
+  display: flex;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .modal-footer {
@@ -344,11 +360,15 @@ svg#star-full-big {
   display: flex;
   justify-content: space-around;
 }
-.price-div {
-  display: flex;
-  flex-direction: column;
-}
+
 @media screen and (min-width: 768px) {
+  .amount-price {
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
   .secondary-button {
     display: none;
   }
@@ -425,6 +445,21 @@ svg#star-full-big {
 }
 
 @media screen and (max-width: 767px) {
+  .amount-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #202020 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 27px;
+  }
+  .old-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  }
     .footer-phone-icon{
         display: none !important;
     }
