@@ -1,0 +1,3390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nauti Amigo Cruise - Valentine's Day 2026</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alice:wght@400&amp;family=Playfair+Display:wght@400;700;900&amp;family=Montserrat:wght@300;400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Alice", serif;
+      background: #000000;
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    /* Premium Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes sparkleFloat {
+
+      0%,
+      100% {
+        opacity: 0.3;
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    @keyframes goldShimmer {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    /* Floating Sparkles */
+    .sparkle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: linear-gradient(45deg, #ffd700, #ffed4e, #fff);
+      border-radius: 50%;
+      animation: sparkleFloat 4s infinite ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+
+    /* Hero Section with Slideshow */
+    .hero-section {
+      position: relative;
+      height: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .slideshow-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0.8) 100%);
+      z-index: 1;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center,
+          rgba(255, 215, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.3) 70%,
+          rgba(0, 0, 0, 0.8) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 1000px;
+      width: 100%;
+      padding: 40px 20px;
+      animation: fadeInUp 1.5s ease-out;
+      box-sizing: border-box;
+    }
+
+    .cruise-logo {
+      font-family: "Alice", serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #ffd700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+      background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: goldShimmer 3s linear infinite;
+    }
+
+    .happy-new-year {
+      font-family: "Alice", serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: #e74c3c;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      background: linear-gradient(45deg, #e74c3c, #c0392b, #e74c3c);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: goldShimmer 3s linear infinite;
+      text-align: center;
+    }
+
+    .main-title {
+      font-family: "Alice", serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+      margin-bottom: 25px;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-family: "Alice", serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: #f0f0f0;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      letter-spacing: 0.5px;
+    }
+
+    .premium-highlight {
+      background: linear-gradient(135deg,
+          #ffd700 0%,
+          #ffed4e 50%,
+          #ffd700 100%);
+      color: #000;
+      padding: 20px 50px;
+      border-radius: 60px;
+      font-family: "Alice", serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      display: inline-block;
+      box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4),
+        inset 0 2px 10px rgba(255, 255, 255, 0.3);
+      animation: glow 3s ease-in-out infinite alternate;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4),
+          inset 0 2px 10px rgba(255, 255, 255, 0.3);
+      }
+
+      to {
+        box-shadow: 0 20px 50px rgba(255, 215, 0, 0.8),
+          inset 0 2px 15px rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    /* Premium Countdown */
+    .countdown-container {
+      margin: 50px 0;
+      animation: slideIn 1.5s ease-out 0.5s both;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background: linear-gradient(135deg,
+          rgba(255, 215, 0, 0.15),
+          rgba(255, 215, 0, 0.05));
+      border: 2px solid rgba(255, 215, 0, 0.6);
+      border-radius: 20px;
+      padding: 30px 25px;
+      text-align: center;
+      min-width: 120px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 1px 10px rgba(255, 215, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .countdown-item:hover {
+      transform: translateY(-10px);
+      border-color: #ffd700;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+        0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .countdown-number {
+      font-family: "Alice", serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #ffd700;
+      display: block;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .countdown-label {
+      font-family: "Alice", serif;
+      font-size: 1rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    /* Premium CTA Buttons */
+    .cta-section {
+      margin-top: 60px;
+      animation: fadeInUp 1.5s ease-out 1s both;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-premium {
+      font-family: "Alice", serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 20px 50px;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg,
+          #e74c3c 0%,
+          #c0392b 50%,
+          #e74c3c 100%);
+      color: #ffffff;
+      box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4),
+        inset 0 2px 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 25px 50px rgba(231, 76, 60, 0.6),
+        inset 0 2px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #ffd700;
+      border: 3px solid #ffd700;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3),
+        inset 0 1px 5px rgba(255, 215, 0, 0.1);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    /* Slideshow Navigation */
+    .slideshow-nav {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 15;
+    }
+
+    .nav-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: rgba(255, 215, 0, 0.3);
+      border: 2px solid rgba(255, 215, 0, 0.6);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot.active {
+      background: #ffd700;
+      border-color: #ffd700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+
+    /* Entertainment Section */
+    .entertainment-section {
+      padding: 120px 20px;
+      background: linear-gradient(135deg,
+          #0a0a0a 0%,
+          #1a1a1a 50%,
+          #0a0a0a 100%);
+      position: relative;
+    }
+
+    .entertainment-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: "Alice", serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 80px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    }
+
+    .entertainment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    /* Desktop Grid - Show on desktop */
+    .entertainment-grid-desktop {
+      display: grid;
+    }
+
+    /* Mobile Slider - Hide on desktop */
+    .entertainment-slider-mobile {
+      display: none;
+    }
+
+    .entertainment-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 0 15px;
+      touch-action: pan-x;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .entertainment-slider {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      touch-action: pan-x;
+    }
+
+    .entertainment-slider .entertainment-card {
+      flex-shrink: 0;
+      width: 85vw;
+      max-width: 350px;
+      touch-action: pan-x;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: auto;
+    }
+
+    .entertainment-card {
+      background: linear-gradient(135deg,
+          rgba(255, 215, 0, 0.1),
+          rgba(255, 215, 0, 0.05));
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 25px;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      backdrop-filter: blur(20px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .entertainment-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      border-color: #ffd700;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(255, 215, 0, 0.2);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 270px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+    }
+
+    .card-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.3) 0%,
+          rgba(255, 215, 0, 0.1) 50%,
+          rgba(0, 0, 0, 0.4) 100%);
+      transition: all 0.3s ease;
+    }
+
+    .entertainment-card:hover .card-image::before {
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(255, 215, 0, 0.2) 50%,
+          rgba(0, 0, 0, 0.2) 100%);
+    }
+
+    .card-content {
+      padding: 35px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-duration {
+      margin-top: 12px;
+      padding: 12px 20px;
+      background: linear-gradient(135deg,
+          rgba(255, 215, 0, 0.15),
+          rgba(255, 215, 0, 0.05));
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 15px;
+      color: #ffd700;
+      font-family: "Alice", serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .card-title {
+      font-family: "Alice", serif;
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .card-description {
+      font-family: "Alice", serif;
+      color: #e0e0e0;
+      line-height: 1.8;
+      text-align: center;
+      font-size: 1.1rem;
+      flex: 1;
+    }
+
+    /* Food & Drinks Section */
+    .food-section {
+      padding: 120px 20px;
+      background: linear-gradient(135deg,
+          #000000 0%,
+          #1a1a1a 50%,
+          #000000 100%);
+    }
+
+    .food-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    /* Desktop Grid - Show on desktop */
+    .food-grid-desktop {
+      display: grid;
+    }
+
+    /* Mobile Slider - Hide on desktop */
+    .food-slider-mobile {
+      display: none;
+    }
+
+    .food-slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 0 15px;
+      margin-top: 60px;
+      touch-action: pan-x;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .food-slider {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      touch-action: pan-x;
+    }
+
+    .food-slider .menu-panel {
+      flex-shrink: 0;
+      width: 85vw;
+      max-width: 400px;
+      touch-action: pan-x;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: auto;
+    }
+
+    .menu-panel {
+      background: linear-gradient(135deg,
+          rgba(255, 215, 0, 0.08),
+          rgba(0, 0, 0, 0.9));
+      border: 2px solid rgba(255, 215, 0, 0.4);
+      border-radius: 30px;
+      padding: 30px 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 10px rgba(255, 215, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .menu-panel:hover {
+      border-color: rgba(255, 215, 0, 0.8);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(255, 215, 0, 0.2);
+    }
+
+    .no-border-panel {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      padding: 0 !important;
+      grid-column: 1 / -1;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .no-border-panel:hover {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .menu-title {
+      font-family: "Alice", serif;
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .menu-category {
+      margin-bottom: 20px;
+    }
+
+    .menu-category h4 {
+      font-family: "Alice", serif;
+      color: #ffd700;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+      padding-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .menu-items {
+      font-family: "Alice", serif;
+      color: #e0e0e0;
+      line-height: 1.8;
+      font-size: 1.2rem;
+    }
+
+    .special-highlight {
+      background: linear-gradient(135deg,
+          #ffd700 0%,
+          #ffed4e 50%,
+          #ffd700 100%);
+      color: #000;
+      padding: 25px;
+      border-radius: 20px;
+      margin: 30px 0;
+      text-align: center;
+      font-family: "Alice", serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      animation: pulse 3s infinite;
+      box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+
+    .special-highlight:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 20px 45px rgba(255, 215, 0, 0.6);
+      background: linear-gradient(135deg,
+          #ffed4e 0%,
+          #ffd700 50%,
+          #ffed4e 100%);
+    }
+
+    .special-highlight:active {
+      transform: translateY(-1px) scale(1.01);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.03);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 60px 20px;
+      background: linear-gradient(135deg,
+          #0a0a0a 0%,
+          #1a1a1a 50%,
+          #0a0a0a 100%);
+    }
+
+    .pricing-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pricing-slider-wrapper {
+      position: relative;
+      max-width: 100%;
+      margin: 60px auto;
+    }
+
+    /* Desktop Slider - Auto-scroll */
+    .pricing-slider-desktop {
+      display: block;
+      overflow: hidden;
+    }
+
+    /* Mobile Slider - Auto-scroll */
+    .pricing-slider-mobile {
+      display: none;
+      overflow: hidden;
+      padding: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-slider-desktop {
+        display: none;
+      }
+
+      .pricing-slider-mobile {
+        display: block;
+      }
+    }
+
+    .pricing-slider {
+      display: flex;
+      gap: 30px;
+      width: fit-content;
+    }
+
+    .pricing-slider-desktop .pricing-slider,
+    .pricing-slider-mobile .pricing-slider {
+      will-change: transform;
+    }
+
+    .price-card {
+      flex-shrink: 0;
+      width: 320px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 2px solid rgba(255, 215, 0, 0.5);
+      border-radius: 40px;
+      padding: 60px 40px;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 215, 0, 0.2);
+    }
+
+    .price-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.3));
+      z-index: 0;
+      border-radius: 40px;
+    }
+
+    .price-card>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .price-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,
+          transparent,
+          rgba(255, 215, 0, 0.1),
+          transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .price-card:hover::before {
+      opacity: 1;
+      transform: rotate(45deg) translate(50%, 50%);
+    }
+
+    .price-card:hover {
+      transform: scale(1.02);
+      border-color: #ffd700;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(255, 215, 0, 0.3);
+    }
+
+
+    .price-title {
+      font-family: "Alice", serif;
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .price-amount {
+      font-family: "Alice", serif;
+      font-size: 3rem;
+      color: #ffffff;
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .price-subtitle {
+      font-family: "Alice", serif;
+      color: #cccccc;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    /* Package Card Styles */
+    .package-card {
+      background: #ffd700;
+      border: 2px solid #ffd700;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 215, 0, 0.2);
+    }
+
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .package-header {
+      background: linear-gradient(135deg,
+          #ffd700 0%,
+          #ffed4e 50%,
+          #ffd700 100%);
+      color: #000;
+      font-family: "Alice", serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-align: center;
+      padding: 25px 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .package-content {
+      padding: 40px 30px;
+      background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+      border-radius: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .package-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .package-label {
+      color: #ffffff;
+      font-family: "Alice", serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .package-price {
+      color: #ffffff;
+      font-family: "Alice", serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .package-book-button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 18px 30px;
+      background: linear-gradient(135deg,
+          #ffd700 0%,
+          #ffed4e 50%,
+          #ffd700 100%);
+      color: #000;
+      font-family: "Alice", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      display: block;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .package-book-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+      background: linear-gradient(135deg,
+          #ffed4e 0%,
+          #ffd700 50%,
+          #ffed4e 100%);
+    }
+
+    .reserved-table-text {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Alice", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-top: 50px;
+      text-transform: uppercase;
+    }
+
+    /* Booking Section */
+    .booking-section {
+      padding: 60px 20px;
+      background: linear-gradient(135deg,
+          rgba(255, 215, 0, 0.05),
+          rgba(0, 0, 0, 0.95));
+    }
+
+    .booking-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .form-input {
+      font-family: "Alice", serif;
+      padding: 20px 25px;
+      border: 2px solid rgba(255, 215, 0, 0.4);
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #ffd700;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .form-input::placeholder {
+      color: #aaaaaa;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+      padding: 80px 20px 40px;
+      border-top: 3px solid #ffd700;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-family: "Playfair Display", serif;
+      color: #ffd700;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      font-family: "Alice", serif;
+      color: #cccccc;
+      text-decoration: none;
+      line-height: 2;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: #ffd700;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .social-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+    }
+
+    .social-icon:hover {
+      transform: translateY(-10px) scale(1.1);
+      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.5);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section {
+        min-height: 100vh;
+        padding: 60px 0 40px;
+      }
+
+      .hero-content {
+        padding: 20px 15px;
+      }
+
+      .cruise-logo {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .happy-new-year {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+      }
+
+      .main-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: 1.3rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+
+      .entertainment-grid-desktop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .food-grid-desktop {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .pricing-section {
+        padding: 80px 0;
+      }
+
+      .pricing-slider-mobile {
+        margin: 40px auto;
+      }
+
+      .pricing-slider {
+        gap: 20px;
+        padding-bottom: 10px;
+      }
+
+      .price-card {
+        width: 280px;
+        min-width: 280px;
+        padding: 35px 25px;
+        border-radius: 30px;
+      }
+
+      .price-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+      }
+
+      .price-amount {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+
+      .price-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .package-header {
+        font-size: 1.5rem;
+        padding: 20px 15px;
+      }
+
+      .package-content {
+        padding: 30px 20px;
+      }
+
+      .package-label {
+        font-size: 1rem;
+      }
+
+      .package-price {
+        font-size: 1.8rem;
+      }
+
+      .reserved-table-text {
+        font-size: 1rem;
+        margin-top: 40px;
+      }
+
+      .countdown {
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .countdown-item {
+        padding: 15px 10px;
+        min-width: 70px;
+      }
+
+      .countdown-number {
+        font-size: 2rem;
+      }
+
+      .countdown-label {
+        font-size: 0.8rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .btn-premium {
+        width: 100%;
+        max-width: 300px;
+        padding: 18px 40px;
+        font-size: 1.1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .premium-highlight {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+      }
+
+      .hero-section {
+        padding: 0 15px;
+      }
+
+      .entertainment-section,
+      .food-section,
+      .pricing-section,
+      .booking-section {
+        padding: 80px 15px;
+      }
+
+      .card-content {
+        padding: 25px;
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+      }
+
+      .card-description {
+        font-size: 1rem;
+      }
+
+      .menu-panel {
+        padding: 30px 20px;
+      }
+
+      .menu-title {
+        font-size: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        min-height: 100vh;
+        padding: 40px 0 30px;
+      }
+
+      .hero-content {
+        padding: 15px 10px;
+      }
+
+      .cruise-logo {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .happy-new-year {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .main-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .entertainment-grid-desktop {
+        display: none;
+      }
+
+      .entertainment-slider-mobile {
+        display: block;
+      }
+
+      .entertainment-slider .entertainment-card {
+        width: 80vw;
+      }
+
+      .food-grid-desktop {
+        display: none;
+      }
+
+      .food-slider-mobile {
+        display: block;
+      }
+
+      .food-slider .menu-panel {
+        width: 80vw;
+      }
+
+      .contact-buttons-container {
+        flex-direction: column;
+        text-align: center;
+        white-space: normal;
+      }
+
+      .countdown-item {
+        padding: 12px 8px;
+        min-width: 60px;
+      }
+
+      .countdown-number {
+        font-size: 1.5rem;
+      }
+
+      .countdown-label {
+        font-size: 0.7rem;
+      }
+
+      .premium-highlight {
+        font-size: 1rem;
+        padding: 12px 25px;
+      }
+
+      .pricing-section {
+        padding: 60px 40px;
+      }
+
+      .pricing-slider-mobile {
+        margin: 30px auto;
+        padding: 0 10px;
+      }
+
+      .pricing-slider {
+        gap: 15px;
+      }
+
+      .price-card {
+        width: 260px;
+        height: 160px;
+        min-width: 260px;
+        padding: 30px 20px;
+        border-radius: 25px;
+      }
+
+      .price-card::after {
+        border-radius: 25px;
+
+      }
+
+      .price-title {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+
+      .price-amount {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .price-subtitle {
+        font-size: 0.85rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+
+<body>
+  <!-- Floating Sparkles -->
+  <div class="sparkle-container">
+    <div class="sparkle" style="top: 15%; left: 10%; animation-delay: 0s"></div>
+    <div class="sparkle" style="top: 25%; left: 85%; animation-delay: 1s"></div>
+    <div class="sparkle" style="top: 45%; left: 20%; animation-delay: 2s"></div>
+    <div class="sparkle" style="top: 65%; left: 75%; animation-delay: 3s"></div>
+    <div class="sparkle" style="top: 80%; left: 30%; animation-delay: 4s"></div>
+    <div class="sparkle" style="top: 35%; left: 60%; animation-delay: 1.5s"></div>
+    <div class="sparkle" style="top: 55%; left: 40%; animation-delay: 2.5s"></div>
+    <div class="sparkle" style="top: 75%; left: 90%; animation-delay: 3.5s"></div>
+  </div>
+  <!-- Hero Section with Slideshow -->
+  <section class="hero-section">
+    <div class="slideshow-container">
+      <div class="slide active" style="background-image: url('../img/newYearImgs/banner/01.png')"></div>
+      <div class="slide" style="background-image: url('../img/newYearImgs/banner/02.png')"></div>
+      <div class="slide" style="background-image: url('../img/newYearImgs/banner/03.png')"></div>
+      <div class="slide" style="background-image: url('../img/newYearImgs/banner/04.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="cruise-logo">NAUTI AMIGO CRUISE</div>
+      <div class="happy-new-year">HAPPY VALENTINE'S DAY</div>
+      <h1 class="main-title" id="main-title">
+        Valentine's Day Celebration
+      </h1>
+      <p class="subtitle" id="subtitle">
+        A Grand Night on the Nauti Amigo Cruise, Goa
+      </p>
+      <div class="premium-highlight" id="highlight-text">
+        Reserved Table for Every Booking
+      </div>
+      <div class="countdown-container">
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-section"></div>
+    </div>
+    <div class="slideshow-nav">
+      <div class="nav-dot active" onclick="currentSlide(1)"></div>
+      <div class="nav-dot" onclick="currentSlide(2)"></div>
+      <div class="nav-dot" onclick="currentSlide(3)"></div>
+      <div class="nav-dot" onclick="currentSlide(4)"></div>
+    </div>
+  </section>
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="pricing-container">
+      <h2 class="section-title">Cruise Highlights </h2>
+
+      <!-- Desktop Slider with Auto-Scroll -->
+      <div class="pricing-slider-wrapper pricing-slider-desktop">
+        <div class="pricing-slider" id="pricingSliderDesktop">
+          <!-- Cards will be generated dynamically by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Mobile Slider with Manual Scroll -->
+      <div class="pricing-slider-wrapper pricing-slider-mobile">
+        <div class="pricing-slider" id="pricingSliderMobile">
+          <!-- Cards will be generated dynamically by JavaScript -->
+        </div>
+      </div>
+      <a href="https://wa.me/9324105081?text=Hi!%20I%20would%20like%20to%20book%20my%20spot%20for%20the%20Valentine's%20Day%20Celebration%20on%20Nauti Amigo%20Cruise."
+        target="_blank" class="special-highlight">
+        💎 SECURE YOUR SPOT NOW FOR JUST ₹1,000 Per Person 💎<br />
+        Balance payable onboard • Limited Seats Available
+      </a>
+      <div style="
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+          "></div>
+    </div>
+  </section>
+  <!-- Entertainment Section -->
+  <section class="entertainment-section">
+    <div class="entertainment-container">
+      <h2 class="section-title">Entertainment Line-Up</h2>
+
+      <!-- Desktop Grid View -->
+      <div class="entertainment-grid entertainment-grid-desktop">
+        <!-- Cards will be generated dynamically by JavaScript -->
+      </div>
+
+      <!-- Mobile Slider View -->
+      <div class="entertainment-slider-wrapper entertainment-slider-mobile">
+        <div class="entertainment-slider" id="entertainmentSlider">
+          <!-- Cards will be generated dynamically by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Culinary Delights Section -->
+  <section class="entertainment-section">
+    <div class="entertainment-container">
+      <h2 class="section-title">Culinary Delights (Unlimited) </h2>
+
+      <!-- Desktop Grid View -->
+      <div class="entertainment-grid entertainment-grid-desktop">
+        <!-- Cards will be generated dynamically by JavaScript -->
+      </div>
+
+      <!-- Mobile Slider View -->
+      <div class="entertainment-slider-wrapper entertainment-slider-mobile">
+        <div class="entertainment-slider" id="culinarySlider">
+          <!-- Cards will be generated dynamically by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Food & Drinks Section -->
+  <section class="food-section">
+    <div class="food-container">
+      <h2 class="section-title">Premium Beverages</h2>
+
+      <!-- Desktop Grid View -->
+      <div class="food-grid food-grid-desktop">
+        <!-- Section 1: Complimentary Premium Selection -->
+        <div class="menu-panel">
+          <h3 class="menu-title">🥂 Alcoholic Offerings</h3>
+          <div class="menu-category">
+            <div class="menu-items">
+              • Red Label<br />
+              • Jameson<br />
+              • Smirnoff<br />
+              • Bacardi<br />
+              • Kingfisher Premium<br />
+              • Budweiser<br />
+              • 1 Complimentary Wine / Champagne 
+            </div>
+          </div>
+          
+        </div>
+        <!-- Section 2: Ultra-Premium Selection -->
+        <div class="menu-panel">
+          <h3 class="menu-title">🍾 Soft Beverages</h3>
+          <div class="menu-category">
+            <div class="menu-items">
+              • Pepsi <br />
+              • Limca <br />
+              • Sprite <br />
+              • Mirinda <br />
+              • Thumpsup <br />
+              
+            </div>
+          </div>
+        </div>
+        <!-- Section 3: Ultra-Premium Selection -->
+        <div class="menu-panel">
+          <h3 class="menu-title">🍾 Ultra-Premium Selection</h3>
+          <div class="menu-category">
+            <div class="menu-items">
+              • Ballantine's – ₹3,000 per bottle / ₹700 per 60ml<br />
+              • Amrut – ₹4,600 per bottle / ₹900 per 60ml<br />
+              • Chivas Regal – ₹4,500 per bottle / ₹800 per 60ml<br />
+              • Corona Beer<br />
+              • Breezer / Premium Wine / Fruit Cocktails
+            </div>
+          </div>
+        </div>
+        <!-- Section 4: Midnight Special -->
+        <div class="menu-panel no-border-panel">
+          <h3 class="menu-title">🎉 Midnight Special</h3>
+          <div class="special-highlight">
+            After 12:00 AM — Unlimited Complimentary Drinks for 30 Minutes!
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Slider View -->
+      <div class="food-slider-wrapper food-slider-mobile">
+        <div class="food-slider" id="beverageSlider">
+          <!-- Section 1: Complimentary Premium Selection -->
+          <div class="menu-panel">
+            <h3 class="menu-title">🥂 Alcoholic Offerings</h3>
+            <div class="menu-category">
+              <div class="menu-items">
+                • Red Label<br />
+                • Jameson<br />
+                • Smirnoff<br />
+                • Bacardi<br />
+                • Kingfisher Premium<br />
+                • Budweiser<br />
+                • 1 Complimentary Wine / Champagne 
+              </div>
+            </div>
+            
+          </div>
+          <!-- Section 2: Ultra-Premium Selection -->
+          <div class="menu-panel">
+            <h3 class="menu-title">🍾 Soft Beverages</h3>
+            <div class="menu-category">
+              <div class="menu-items">
+                • Pepsi <br />
+                • Limca <br />
+                • Sprite <br />
+                • Mirinda <br />
+                • Thumpsup <br />
+                
+              </div>
+            </div>
+          </div>
+          <!-- Section 3: Ultra-Premium Selection -->
+          <div class="menu-panel">
+            <h3 class="menu-title">🍾 Ultra-Premium Selection</h3>
+            <div class="menu-category">
+              <div class="menu-items">
+                • Ballantine's – ₹3,000 per bottle / ₹700 per 60ml<br />
+                • Amrut – ₹4,600 per bottle / ₹900 per 60ml<br />
+                • Chivas Regal – ₹4,500 per bottle / ₹800 per 60ml<br />
+                • Corona Beer<br />
+                • Breezer / Premium Wine / Fruit Cocktails
+              </div>
+            </div>
+          </div>
+          <!-- Section 4: Midnight Special -->
+          <div class="menu-panel no-border-panel">
+            <h3 class="menu-title">🎉 Midnight Special</h3>
+            <div class="special-highlight">
+              After 12:00 AM — Unlimited Complimentary Drinks for 30 Minutes!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="pricing-container">
+      <h2 class="section-title">Exclusive Packages</h2>
+      <div class="pricing-grid">
+        <div class="package-card">
+          <div class="package-header">Candle Light Dinner</div>
+          <div class="package-content">
+            <div class="package-row">
+              <span class="package-label">ADULTS</span>
+              <span class="package-price">₹4999/-</span>
+            </div>
+            <div class="package-row">
+              <span class="package-label">KIDS(5-12)</span>
+              <span class="package-price">1999/-</span>
+            </div>
+            <div class="package-row">
+              <span class="package-label">KIDS(BELOW 5)</span>
+              <span class="package-price">FREE</span>
+            </div>
+              <a href="https://bookings.nautiamigo.com/special-days/details/book-candlelight-dinner-package-in-goa"
+              target="_self" class="package-book-button">
+              Book Online
+            </a>
+          </div>
+        </div>
+
+      </div>
+      
+  </section>
+  <!-- Booking Section -->
+  <section class="booking-section" id="booking">
+    <div class="booking-container">
+      <h2 class="section-title">Reserve Your Experience</h2>
+      <div style="margin-top: 60px">
+        <h3 style="
+              font-family: 'Playfair Display', serif;
+              color: #ffd700;
+              margin-bottom: 30px;
+              font-size: 2rem;
+            ">
+          Instant Contact
+        </h3>
+        <div class="contact-buttons-container" style="
+              display: flex;
+              gap: 20px;
+              justify-content: center;
+              flex-wrap: nowrap;
+              align-items: center;
+              white-space: nowrap;
+            ">
+          <a href="tel:+919324105081" class="btn-premium btn-secondary" id="phone-link">
+            <span>Call Now</span>
+          </a>
+          <a href="https://wa.me/9324105081?text=Hi!%20I%20would%20like%20to%20book%20my%20spot%20for%20the%20Valentine's%20Day%20Celebration%20on%20Nauti Amigo%20Cruise."
+            target="_blank" class="btn-premium btn-secondary">
+            <span>Book on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Nauti Amigo Cruise</h3>
+        <p>
+          Experience luxury and elegance on the pristine waters of Goa.
+          Creating unforgettable memories since years.
+        </p>
+        <p style="margin-top: 20px">
+          <strong>Location: Panjim – Goa</strong>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p id="footer-phone">Phone: +91 9324105081</p>
+        <p id="footer-whatsapp">WhatsApp: +91 9324105081</p>
+        <p>Email: sales@nautiamigo.com</p>
+        <p>Website: www.nautiamigo.com</p>
+      </div>
+
+    </div>
+    <div style="
+          border-top: 2px solid rgba(255, 215, 0, 0.3);
+          padding-top: 30px;
+          color: #cccccc;
+          text-align: center;
+        ">
+      <p style="font-size: 1.2rem; margin-bottom: 10px">
+        <strong>Limited Seats | First Come First Served</strong>
+      </p>
+      <p>
+        © 2025 Amigos River Cruising. All rights reserved. | Crafted with love
+        for an unforgettable experience
+      </p>
+    </div>
+  </footer>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      main_title: "Valentine's Day Celebration",
+      subtitle: "A Grand Night on the Nauti Amigo Cruise, Goa",
+      highlight_text: "Reserved Table for Every Booking",
+      adult_price: "₹4,999",
+      kids_price: "₹1,999",
+      phone_number: "+91 8009491049",
+      whatsapp_number: "+91 8009491049",
+      background_color: "#000000",
+      accent_color: "#ffd700",
+      text_color: "#ffffff",
+      font_family: "Alice",
+      font_size: 16,
+    };
+
+    // Slideshow functionality
+    let slideIndex = 1;
+    let slideInterval;
+
+    function showSlides(n) {
+      const slides = document.querySelectorAll(".slide");
+      const dots = document.querySelectorAll(".nav-dot");
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      slides.forEach((slide) => slide.classList.remove("active"));
+      dots.forEach((dot) => dot.classList.remove("active"));
+
+      slides[slideIndex - 1].classList.add("active");
+      dots[slideIndex - 1].classList.add("active");
+    }
+
+    function currentSlide(n) {
+      clearInterval(slideInterval);
+      showSlides((slideIndex = n));
+      startSlideshow();
+    }
+
+    function nextSlide() {
+      showSlides((slideIndex += 1));
+    }
+
+    function startSlideshow() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Initialize slideshow
+    showSlides(slideIndex);
+    startSlideshow();
+
+    // Desktop Pricing Slider - Auto-Scrolling Effect
+    let desktopSliderOffset = 0;
+    let desktopSliderInterval;
+    let desktopCardWidth = 0;
+    let desktopGap = 30;
+
+    function initDesktopPricingSlider() {
+      const slider = document.getElementById("pricingSliderDesktop");
+      if (!slider) return;
+
+      const cards = slider.querySelectorAll(".price-card");
+      if (cards.length === 0) return;
+
+      // Remove existing clones if any
+      const originalCards = Array.from(cards).slice(0, cards.length / 2);
+      slider.innerHTML = "";
+      originalCards.forEach((card) => slider.appendChild(card));
+
+      // Calculate card width including gap
+      const firstCard = slider.querySelector(".price-card");
+      if (!firstCard) return;
+
+      desktopCardWidth = firstCard.offsetWidth + desktopGap;
+
+      // Duplicate cards for seamless infinite loop
+      const cardsToClone = slider.querySelectorAll(".price-card");
+      cardsToClone.forEach((card) => {
+        const clone = card.cloneNode(true);
+        slider.appendChild(clone);
+      });
+    }
+
+    function animateDesktopPricingSlider() {
+      const slider = document.getElementById("pricingSliderDesktop");
+      if (!slider || desktopCardWidth === 0) return;
+
+      const cards = slider.querySelectorAll(".price-card");
+      const totalCards = cards.length;
+      const loopPoint = (totalCards / 2) * desktopCardWidth;
+
+      desktopSliderOffset -= 0.5; // Scroll speed
+
+      // Reset position when we've scrolled through half the cards
+      if (Math.abs(desktopSliderOffset) >= loopPoint) {
+        desktopSliderOffset = 0;
+      }
+
+      slider.style.transform = `translateX(${desktopSliderOffset}px)`;
+    }
+
+    function startDesktopPricingSlider() {
+      if (desktopSliderInterval) {
+        clearInterval(desktopSliderInterval);
+      }
+      desktopSliderInterval = setInterval(animateDesktopPricingSlider, 16); // ~60fps
+    }
+
+    // Mobile Pricing Slider - Auto-Scrolling Effect
+    let mobileSliderOffset = 0;
+    // Cruise Highlights Data
+    const cruiseHighlights = [
+      "Luxury Sailing Cruise.png",
+      "Triple Deck.png",
+      "AC VIP Lounge.png",
+      "Premium Sofa Seating.png",
+      "Open Deck.png",
+      "Live DJ.png",
+      "Dance Floor.png",
+      "Onboard Bar.png",
+      "Onboard Hookah Counter.png",
+      "Spacious Washrooms.png",
+      "Romantic Ambience.png",
+      "Family Friendly.png",
+      "Couple Friendly.png",
+      "Photo Moments.png",
+      "Night Lights.png",
+      "Celebration Ready.png",
+      "Safe & Secure.png",
+    ];
+
+    // Entertainment Data
+    const entertainmentData = [
+      {
+        image: "New Year Countdown.png",
+        title: "Valentine's Day Celebration",
+        description: "Join the exciting Valentine's Day celebration with live music, cheers, and celebration as we welcome the Valentine's Day together",
+        duration: "Midnight Moment"
+      },
+      {
+        image: "Firecrackers.png",
+        title: "Firecrackers",
+        description: "Spectacular firecracker display lighting up the night sky as part of the grand New Year celebration with dazzling visual effects",
+        duration: "Midnight Celebration"
+      },
+      {
+        image: "4 Hours Cruising.png",
+        title: "3 Hours Cruising",
+        description: "Enjoy an extended 3-hour cruising experience along the beautiful Goan coastline with stunning sunset and night views",
+        duration: "Duration: 4 hours"
+      },
+      {
+        image: "Russian Belley dance.png",
+        title: "Russian Belly Dance",
+        description: "Mesmerizing Russian belly dance performances featuring skilled Indian dancers with elegant movements and captivating choreography",
+        duration: "10 Minutes Session"
+      },
+      {
+        image: "Bollywood dance.png",
+        title: "Bollywood Dance",
+        description: "Bollywood dance performances featuring the best of Indian cinema with classic and contemporary songs, choreography, and costumes",
+        duration: "10 Minutes Session"
+      },
+      {
+        image: "Tollywood dance.png",
+        title: "Tollywood Dance",
+        description: "Tollywood dance performances featuring the best of Telugu cinema with classic and contemporary songs, choreography, and costumes",
+        duration: "10 Minutes Session"
+      },
+      {
+        image: "Live DJ.png",
+        title: "Live DJ",
+        description: "Professional live DJ spinning the hottest international and Bollywood tracks for the entire evening",
+        duration: "All Night Long"
+      },
+      {
+        image: "Games n fun.png",
+        title: "Games and Fun",
+        description: "Interactive games and luxury activities for all age groups with exciting participation, team challenges, and entertainment",
+        duration: "Duration: 30 minutes"
+      },
+
+      {
+        image: "mrs and miss 2026.png",
+        title: "Mr. & Miss/Mrs. 2026",
+        description: "Glamorous beauty pageant contest to crown the winners of the night with exciting luxury prizes and prestigious recognition",
+        duration: "Grand Finale"
+      },
+      {
+        image: "Spot Prizes.png",
+        title: "Exclusive Spot Prizes",
+        description: "Amazing luxury prizes and premium giveaways for participants aged 1-99 years throughout the evening with surprise rewards",
+        duration: "Multiple Rounds"
+      },
+    ];
+
+    // Culinary Delights Data
+    const culinaryData = [
+      {
+        image: "unlimited soup.png",
+        title: "Artisan Soups",
+        description: "Warm and comforting unlimited soup options including both vegetarian and non-vegetarian varieties, perfect to start your meal",
+        duration: "Available All Night"
+      },
+
+      {
+        image: "unlimited veg starters.png",
+        title: "Veg Starters",
+        description: "Crispy and flavorful unlimited vegetarian starters featuring a variety of appetizers, snacks, and finger foods",
+        duration: "Available All Night"
+      },
+      {
+        image: "Non-Veg Starters.png",
+        title: "Non-Veg Starters",
+        description: "Tantalizing non-vegetarian starters featuring a variety of meat and seafood options, perfectly seasoned and cooked to perfection",
+        duration: "Available All Night"
+      },
+
+      {
+        image: "Buffet Dinner.png",
+        title: "Veg Buffet Dinner",
+        description: "Extensive buffet dinner featuring a wide selection of cuisines, from traditional to international, prepared by expert chefs",
+        duration: "Duration: 4 hours"
+      },
+      {
+        image: "Buffet Dinner.png",
+        title: "Non-Veg Buffet Dinner",
+        description: "Extensive buffet dinner featuring a wide selection of cuisines, from traditional to international, prepared by expert chefs",
+        duration: "Duration: 4 hours"
+      }, {
+        image: "IMFL Drinks.png",
+        title: "IMFL Drinks",
+        description: "Premium Indian Made Foreign Liquor drinks including whiskey, rum, vodka, and more, served throughout the evening",
+        duration: "Available All Night"
+      },
+      {
+        image: "Soft Drinks.png",
+        title: "Soft Drinks",
+        description: "Refreshing soft drinks and beverages including sodas, juices, and mocktails to keep you hydrated throughout the evening",
+        duration: "Available All Night"
+      },
+      {
+        image: "Accompaniment.png",
+        title: "Accompaniment",
+        description: "Delicious accompaniments and side dishes to complement your main course with a variety of flavors and textures",
+        duration: "Available All Night"
+      },
+      {
+        image: "Desserts.png",
+        title: "Desserts",
+        description: "Indulge in a variety of delectable desserts including traditional sweets and international favorites to satisfy your sweet tooth",
+        duration: "Available All Night"
+      },
+
+
+    ];
+
+    // Function to generate title from filename
+    function getTitleFromFilename(filename) {
+      // Remove .png extension
+      let title = filename.replace('.png', '');
+      // Handle special cases like "LOunge" -> "Lounge"
+      title = title.replace('LOunge', 'Lounge');
+      // Handle "n" -> "and" in cases like "Games n fun"
+      title = title.replace(/\sn\s/g, ' & ');
+      return title;
+    }
+
+    // Function to create a price card element
+    function createPriceCard(imageFilename) {
+      const card = document.createElement('div');
+      card.className = 'price-card';
+      const imagePath = `../img/newYearImgs/Cruise Highlights/${imageFilename}`;
+      card.style.backgroundImage = `url('${imagePath}')`;
+
+      const title = document.createElement('h3');
+      title.className = 'price-title';
+      title.textContent = getTitleFromFilename(imageFilename);
+
+      const amount = document.createElement('div');
+      amount.className = 'price-amount';
+
+      const subtitle = document.createElement('p');
+      subtitle.className = 'price-subtitle';
+
+      card.appendChild(title);
+      card.appendChild(amount);
+      card.appendChild(subtitle);
+
+      return card;
+    }
+
+    // Function to populate slider with cards
+    function populateSlider(sliderId) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return;
+
+      slider.innerHTML = ''; // Clear existing content
+
+      cruiseHighlights.forEach(imageFilename => {
+        const card = createPriceCard(imageFilename);
+        slider.appendChild(card);
+      });
+    }
+
+    // Initialize cards for both sliders
+    function initializeCruiseHighlightCards() {
+      populateSlider('pricingSliderDesktop');
+      populateSlider('pricingSliderMobile');
+    }
+
+    // Function to create an entertainment card element
+    function createEntertainmentCard(item) {
+      const card = document.createElement('div');
+      card.className = 'entertainment-card';
+
+      const imageDiv = document.createElement('div');
+      imageDiv.className = 'card-image';
+      const imagePath = `../img/newYearImgs/entertainment/${item.image}`;
+      imageDiv.style.backgroundImage = `url('${imagePath}')`;
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'card-content';
+
+      const title = document.createElement('h3');
+      title.className = 'card-title';
+      title.textContent = item.title;
+
+      const description = document.createElement('p');
+      description.className = 'card-description';
+      description.textContent = item.description;
+
+      const duration = document.createElement('div');
+      duration.className = 'card-duration';
+      duration.textContent = item.duration;
+
+      contentDiv.appendChild(title);
+      contentDiv.appendChild(description);
+      contentDiv.appendChild(duration);
+
+      card.appendChild(imageDiv);
+      card.appendChild(contentDiv);
+
+      return card;
+    }
+
+    // Function to populate entertainment grid
+    function populateEntertainmentGrid() {
+      const grid = document.querySelector('.entertainment-grid-desktop');
+      if (!grid) return;
+
+      grid.innerHTML = ''; // Clear existing content
+
+      entertainmentData.forEach(item => {
+        const card = createEntertainmentCard(item);
+        grid.appendChild(card);
+      });
+    }
+
+    // Function to populate entertainment slider
+    function populateEntertainmentSlider() {
+      const slider = document.getElementById('entertainmentSlider');
+      if (!slider) return;
+
+      slider.innerHTML = ''; // Clear existing content
+
+      entertainmentData.forEach(item => {
+        const card = createEntertainmentCard(item);
+        slider.appendChild(card);
+      });
+    }
+
+    // Initialize entertainment cards
+    function initializeEntertainmentCards() {
+      populateEntertainmentGrid();
+      populateEntertainmentSlider();
+    }
+
+    // Function to create a culinary card element
+    function createCulinaryCard(item) {
+      const card = document.createElement('div');
+      card.className = 'entertainment-card';
+
+      const imageDiv = document.createElement('div');
+      imageDiv.className = 'card-image';
+      const imagePath = `../img/newYearImgs/culinary delights/${item.image}`;
+      imageDiv.style.backgroundImage = `url('${imagePath}')`;
+
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'card-content';
+
+      const title = document.createElement('h3');
+      title.className = 'card-title';
+      title.textContent = item.title;
+
+      const description = document.createElement('p');
+      description.className = 'card-description';
+      description.textContent = item.description;
+
+      const duration = document.createElement('div');
+      duration.className = 'card-duration';
+      duration.textContent = item.duration;
+
+      contentDiv.appendChild(title);
+      contentDiv.appendChild(description);
+      contentDiv.appendChild(duration);
+
+      card.appendChild(imageDiv);
+      card.appendChild(contentDiv);
+
+      return card;
+    }
+
+    // Function to populate culinary grid (desktop)
+    function populateCulinaryGrid() {
+      // Find the culinary grid - it's the second entertainment-grid-desktop (after entertainment section)
+      const grids = document.querySelectorAll('.entertainment-grid-desktop');
+      const culinaryGrid = grids[1]; // Second grid is the culinary one
+      if (!culinaryGrid) return;
+
+      culinaryGrid.innerHTML = ''; // Clear existing content
+
+      culinaryData.forEach(item => {
+        const card = createCulinaryCard(item);
+        culinaryGrid.appendChild(card);
+      });
+    }
+
+    // Function to populate culinary slider (mobile)
+    function populateCulinarySlider() {
+      const slider = document.getElementById('culinarySlider');
+      if (!slider) return;
+
+      slider.innerHTML = ''; // Clear existing content
+
+      culinaryData.forEach(item => {
+        const card = createCulinaryCard(item);
+        slider.appendChild(card);
+      });
+    }
+
+    // Initialize culinary cards
+    function initializeCulinaryCards() {
+      populateCulinaryGrid();
+      populateCulinarySlider();
+    }
+
+    let mobileSliderInterval;
+    let mobileCardWidth = 0;
+    let mobileGap = 20;
+
+    function initMobilePricingSlider() {
+      const slider = document.getElementById("pricingSliderMobile");
+      if (!slider) return;
+
+      const cards = slider.querySelectorAll(".price-card");
+      if (cards.length === 0) return;
+
+      // Remove existing clones if any
+      const originalCards = Array.from(cards).slice(0, cards.length / 2);
+      slider.innerHTML = "";
+      originalCards.forEach((card) => slider.appendChild(card));
+
+      // Calculate card width including gap
+      const firstCard = slider.querySelector(".price-card");
+      if (!firstCard) return;
+
+      mobileGap = window.innerWidth <= 480 ? 15 : 20;
+      mobileCardWidth = firstCard.offsetWidth + mobileGap;
+
+      // Duplicate cards for seamless infinite loop
+      const cardsToClone = slider.querySelectorAll(".price-card");
+      cardsToClone.forEach((card) => {
+        const clone = card.cloneNode(true);
+        slider.appendChild(clone);
+      });
+    }
+
+    function animateMobilePricingSlider() {
+      const slider = document.getElementById("pricingSliderMobile");
+      if (!slider || mobileCardWidth === 0) return;
+
+      const cards = slider.querySelectorAll(".price-card");
+      const totalCards = cards.length;
+      const loopPoint = (totalCards / 2) * mobileCardWidth;
+
+      mobileSliderOffset -= 0.5; // Scroll speed
+
+      // Reset position when we've scrolled through half the cards
+      if (Math.abs(mobileSliderOffset) >= loopPoint) {
+        mobileSliderOffset = 0;
+      }
+
+      slider.style.transform = `translateX(${mobileSliderOffset}px)`;
+    }
+
+    function startMobilePricingSlider() {
+      if (mobileSliderInterval) {
+        clearInterval(mobileSliderInterval);
+      }
+      mobileSliderInterval = setInterval(animateMobilePricingSlider, 16); // ~60fps
+    }
+
+    // Initialize cruise highlight cards first, then initialize sliders
+    function initAllSliders() {
+      // Generate cards first
+      initializeCruiseHighlightCards();
+      initializeEntertainmentCards();
+      initializeCulinaryCards();
+
+      // Wait a bit for DOM to update, then initialize sliders
+      setTimeout(() => {
+        // Initialize desktop pricing slider
+        if (document.getElementById("pricingSliderDesktop")) {
+          initDesktopPricingSlider();
+          startDesktopPricingSlider();
+
+          // Pause on hover for better UX
+          const sliderWrapper = document.querySelector(".pricing-slider-desktop");
+          if (sliderWrapper) {
+            sliderWrapper.addEventListener("mouseenter", () => {
+              clearInterval(desktopSliderInterval);
+            });
+            sliderWrapper.addEventListener("mouseleave", () => {
+              startDesktopPricingSlider();
+            });
+          }
+        }
+
+        // Initialize mobile pricing slider
+        if (document.getElementById("pricingSliderMobile")) {
+          initMobilePricingSlider();
+          startMobilePricingSlider();
+
+          // Pause on touch for better UX
+          const sliderWrapper = document.querySelector(".pricing-slider-mobile");
+          if (sliderWrapper) {
+            sliderWrapper.addEventListener("touchstart", () => {
+              clearInterval(mobileSliderInterval);
+            });
+            sliderWrapper.addEventListener("touchend", () => {
+              setTimeout(() => startMobilePricingSlider(), 1000);
+            });
+          }
+        }
+      }, 100);
+
+      // Initialize entertainment slider after cards are generated
+      setTimeout(() => {
+        if (document.getElementById("entertainmentSlider")) {
+          initEntertainmentSlider();
+          // Set initial position
+          slideToIndex(0);
+        }
+
+        // Initialize culinary slider after cards are generated
+        if (document.getElementById("culinarySlider")) {
+          initCulinarySlider();
+          // Set initial position for culinary slider
+          slideCulinaryToIndex(0);
+        }
+      }, 200);
+    }
+
+    // Call initialization when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAllSliders);
+    } else {
+      initAllSliders();
+    }
+
+    // Call initialization when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAllSliders);
+    } else {
+      initAllSliders();
+    }
+
+    // Entertainment Slider - Mobile Touch/Swipe
+    let entertainmentSlider = null;
+    let entertainmentCurrentIndex = 0;
+    let entertainmentStartX = 0;
+    let entertainmentCurrentX = 0;
+    let entertainmentIsDragging = false;
+    let entertainmentCardWidth = 0;
+    let entertainmentGap = 20;
+
+    function initEntertainmentSlider() {
+      const slider = document.getElementById("entertainmentSlider");
+      if (!slider) return;
+
+      const cards = slider.querySelectorAll(".entertainment-card");
+      if (cards.length === 0) return;
+
+      // Calculate card width including gap
+      const firstCard = cards[0];
+      if (firstCard) {
+        entertainmentCardWidth = firstCard.offsetWidth + entertainmentGap;
+      }
+
+      // Prevent card clicks during swipe
+      cards.forEach((card) => {
+        card.style.pointerEvents = "auto";
+        card.addEventListener("click", (e) => {
+          if (entertainmentIsDragging) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        });
+      });
+
+      // Touch events - use passive: false to allow preventDefault
+      slider.addEventListener("touchstart", handleTouchStart, { passive: false });
+      slider.addEventListener("touchmove", handleTouchMove, { passive: false });
+      slider.addEventListener("touchend", handleTouchEnd, { passive: false });
+
+      // Mouse events for desktop testing
+      slider.addEventListener("mousedown", handleMouseDown);
+      slider.addEventListener("mousemove", handleMouseMove);
+      slider.addEventListener("mouseup", handleMouseUp);
+      slider.addEventListener("mouseleave", handleMouseUp);
+    }
+
+    function handleTouchStart(e) {
+      entertainmentStartX = e.touches[0].clientX;
+      entertainmentCurrentX = entertainmentStartX;
+      entertainmentIsDragging = false; // Start as false, set to true on move
+    }
+
+    function handleTouchMove(e) {
+      if (!entertainmentStartX) return;
+
+      entertainmentCurrentX = e.touches[0].clientX;
+      const diff = entertainmentCurrentX - entertainmentStartX;
+
+      // If movement is significant, start dragging
+      if (Math.abs(diff) > 10) {
+        entertainmentIsDragging = true;
+        e.preventDefault(); // Prevent scrolling
+      }
+
+      if (entertainmentIsDragging) {
+        updateSliderPosition(diff);
+      }
+    }
+
+    function handleTouchEnd(e) {
+      if (!entertainmentStartX) {
+        entertainmentStartX = 0;
+        entertainmentCurrentX = 0;
+        return;
+      }
+
+      const diff = entertainmentCurrentX - entertainmentStartX;
+      const threshold = entertainmentCardWidth * 0.25; // 25% of card width
+
+      if (entertainmentIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && entertainmentCurrentIndex > 0) {
+          entertainmentCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("entertainmentSlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (entertainmentCurrentIndex < cards.length - 1) {
+              entertainmentCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideToIndex(entertainmentCurrentIndex);
+
+      // Reset
+      entertainmentIsDragging = false;
+      entertainmentStartX = 0;
+      entertainmentCurrentX = 0;
+    }
+
+    function handleMouseDown(e) {
+      entertainmentStartX = e.clientX;
+      entertainmentCurrentX = entertainmentStartX;
+      entertainmentIsDragging = false;
+      e.preventDefault();
+    }
+
+    function handleMouseMove(e) {
+      if (!entertainmentStartX) return;
+
+      entertainmentCurrentX = e.clientX;
+      const diff = entertainmentCurrentX - entertainmentStartX;
+
+      if (Math.abs(diff) > 10) {
+        entertainmentIsDragging = true;
+      }
+
+      if (entertainmentIsDragging) {
+        e.preventDefault();
+        updateSliderPosition(diff);
+      }
+    }
+
+    function handleMouseUp(e) {
+      if (!entertainmentStartX) {
+        entertainmentStartX = 0;
+        entertainmentCurrentX = 0;
+        return;
+      }
+
+      const diff = entertainmentCurrentX - entertainmentStartX;
+      const threshold = entertainmentCardWidth * 0.25;
+
+      if (entertainmentIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && entertainmentCurrentIndex > 0) {
+          entertainmentCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("entertainmentSlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (entertainmentCurrentIndex < cards.length - 1) {
+              entertainmentCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideToIndex(entertainmentCurrentIndex);
+
+      // Reset
+      entertainmentIsDragging = false;
+      entertainmentStartX = 0;
+      entertainmentCurrentX = 0;
+    }
+
+    function updateSliderPosition(offset) {
+      const slider = document.getElementById("entertainmentSlider");
+      if (!slider || entertainmentCardWidth === 0) return;
+
+      const baseOffset = -(entertainmentCurrentIndex * entertainmentCardWidth);
+      const newOffset = baseOffset + offset;
+
+      // Prevent scrolling beyond boundaries
+      const cards = slider.querySelectorAll(".entertainment-card");
+      const minOffset = -((cards.length - 1) * entertainmentCardWidth);
+      const maxOffset = 0;
+
+      const clampedOffset = Math.max(minOffset, Math.min(maxOffset, newOffset));
+      slider.style.transform = `translateX(${clampedOffset}px)`;
+      slider.style.transition = "none"; // Disable transition during drag
+    }
+
+    function slideToIndex(index) {
+      const slider = document.getElementById("entertainmentSlider");
+      if (!slider || entertainmentCardWidth === 0) return;
+
+      const cards = slider.querySelectorAll(".entertainment-card");
+      if (index < 0 || index >= cards.length) return;
+
+      entertainmentCurrentIndex = index;
+      const offset = -(index * entertainmentCardWidth);
+      slider.style.transition = "transform 0.3s ease-out"; // Re-enable transition
+      slider.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Entertainment slider initialization is now handled in initAllSliders()
+    // Recalculate on resize
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const slider = document.getElementById("entertainmentSlider");
+        if (slider) {
+          const cards = slider.querySelectorAll(".entertainment-card");
+          if (cards.length > 0) {
+            const firstCard = cards[0];
+            entertainmentCardWidth = firstCard.offsetWidth + entertainmentGap;
+            slideToIndex(entertainmentCurrentIndex);
+          }
+        }
+      }, 250);
+    });
+
+    // Culinary Slider - Mobile Touch/Swipe (same functionality as entertainment)
+    let culinarySlider = null;
+    let culinaryCurrentIndex = 0;
+    let culinaryStartX = 0;
+    let culinaryCurrentX = 0;
+    let culinaryIsDragging = false;
+    let culinaryCardWidth = 0;
+    let culinaryGap = 20;
+
+    function initCulinarySlider() {
+      const slider = document.getElementById("culinarySlider");
+      if (!slider) return;
+
+      const cards = slider.querySelectorAll(".entertainment-card");
+      if (cards.length === 0) return;
+
+      // Calculate card width including gap
+      const firstCard = cards[0];
+      if (firstCard) {
+        culinaryCardWidth = firstCard.offsetWidth + culinaryGap;
+      }
+
+      // Prevent card clicks during swipe
+      cards.forEach((card) => {
+        card.style.pointerEvents = "auto";
+        card.addEventListener("click", (e) => {
+          if (culinaryIsDragging) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        });
+      });
+
+      // Touch events
+      slider.addEventListener("touchstart", handleCulinaryTouchStart, { passive: false });
+      slider.addEventListener("touchmove", handleCulinaryTouchMove, { passive: false });
+      slider.addEventListener("touchend", handleCulinaryTouchEnd, { passive: false });
+
+      // Mouse events
+      slider.addEventListener("mousedown", handleCulinaryMouseDown);
+      slider.addEventListener("mousemove", handleCulinaryMouseMove);
+      slider.addEventListener("mouseup", handleCulinaryMouseUp);
+      slider.addEventListener("mouseleave", handleCulinaryMouseUp);
+    }
+
+    function handleCulinaryTouchStart(e) {
+      culinaryStartX = e.touches[0].clientX;
+      culinaryCurrentX = culinaryStartX;
+      culinaryIsDragging = false;
+    }
+
+    function handleCulinaryTouchMove(e) {
+      if (!culinaryStartX) return;
+
+      culinaryCurrentX = e.touches[0].clientX;
+      const diff = culinaryCurrentX - culinaryStartX;
+
+      if (Math.abs(diff) > 10) {
+        culinaryIsDragging = true;
+        e.preventDefault();
+      }
+
+      if (culinaryIsDragging) {
+        updateCulinarySliderPosition(diff);
+      }
+    }
+
+    function handleCulinaryTouchEnd(e) {
+      if (!culinaryStartX) {
+        culinaryStartX = 0;
+        culinaryCurrentX = 0;
+        return;
+      }
+
+      const diff = culinaryCurrentX - culinaryStartX;
+      const threshold = culinaryCardWidth * 0.25;
+
+      if (culinaryIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && culinaryCurrentIndex > 0) {
+          culinaryCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("culinarySlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (culinaryCurrentIndex < cards.length - 1) {
+              culinaryCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideCulinaryToIndex(culinaryCurrentIndex);
+
+      culinaryIsDragging = false;
+      culinaryStartX = 0;
+      culinaryCurrentX = 0;
+    }
+
+    function handleCulinaryMouseDown(e) {
+      culinaryStartX = e.clientX;
+      culinaryCurrentX = culinaryStartX;
+      culinaryIsDragging = false;
+      e.preventDefault();
+    }
+
+    function handleCulinaryMouseMove(e) {
+      if (!culinaryStartX) return;
+
+      culinaryCurrentX = e.clientX;
+      const diff = culinaryCurrentX - culinaryStartX;
+
+      if (Math.abs(diff) > 10) {
+        culinaryIsDragging = true;
+      }
+
+      if (culinaryIsDragging) {
+        e.preventDefault();
+        updateCulinarySliderPosition(diff);
+      }
+    }
+
+    function handleCulinaryMouseUp(e) {
+      if (!culinaryStartX) {
+        culinaryStartX = 0;
+        culinaryCurrentX = 0;
+        return;
+      }
+
+      const diff = culinaryCurrentX - culinaryStartX;
+      const threshold = culinaryCardWidth * 0.25;
+
+      if (culinaryIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && culinaryCurrentIndex > 0) {
+          culinaryCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("culinarySlider");
+          if (slider) {
+            const cards = slider.querySelectorAll(".entertainment-card");
+            if (culinaryCurrentIndex < cards.length - 1) {
+              culinaryCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideCulinaryToIndex(culinaryCurrentIndex);
+
+      culinaryIsDragging = false;
+      culinaryStartX = 0;
+      culinaryCurrentX = 0;
+    }
+
+    function updateCulinarySliderPosition(offset) {
+      const slider = document.getElementById("culinarySlider");
+      if (!slider || culinaryCardWidth === 0) return;
+
+      const baseOffset = -(culinaryCurrentIndex * culinaryCardWidth);
+      const newOffset = baseOffset + offset;
+
+      const cards = slider.querySelectorAll(".entertainment-card");
+      const minOffset = -((cards.length - 1) * culinaryCardWidth);
+      const maxOffset = 0;
+
+      const clampedOffset = Math.max(minOffset, Math.min(maxOffset, newOffset));
+      slider.style.transform = `translateX(${clampedOffset}px)`;
+      slider.style.transition = "none";
+    }
+
+    function slideCulinaryToIndex(index) {
+      const slider = document.getElementById("culinarySlider");
+      if (!slider || culinaryCardWidth === 0) return;
+
+      const cards = slider.querySelectorAll(".entertainment-card");
+      if (index < 0 || index >= cards.length) return;
+
+      culinaryCurrentIndex = index;
+      const offset = -(index * culinaryCardWidth);
+      slider.style.transition = "transform 0.3s ease-out";
+      slider.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Culinary slider initialization is now handled in initAllSliders()
+    // Recalculate on resize
+    let culinaryResizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(culinaryResizeTimeout);
+      culinaryResizeTimeout = setTimeout(() => {
+        const slider = document.getElementById("culinarySlider");
+        if (slider) {
+          const cards = slider.querySelectorAll(".entertainment-card");
+          if (cards.length > 0) {
+            const firstCard = cards[0];
+            culinaryCardWidth = firstCard.offsetWidth + culinaryGap;
+            slideCulinaryToIndex(culinaryCurrentIndex);
+          }
+        }
+      }, 250);
+    });
+
+    // Beverage Slider - Mobile Touch/Swipe
+    let beverageCurrentIndex = 0;
+    let beverageStartX = 0;
+    let beverageCurrentX = 0;
+    let beverageIsDragging = false;
+    let beverageCardWidth = 0;
+    let beverageGap = 20;
+
+    function initBeverageSlider() {
+      const slider = document.getElementById("beverageSlider");
+      if (!slider) return;
+
+      const panels = slider.querySelectorAll(".menu-panel");
+      if (panels.length === 0) return;
+
+      // Calculate panel width including gap
+      const firstPanel = panels[0];
+      if (firstPanel) {
+        beverageCardWidth = firstPanel.offsetWidth + beverageGap;
+      }
+
+      // Prevent panel clicks during swipe
+      panels.forEach((panel) => {
+        panel.style.pointerEvents = "auto";
+        panel.addEventListener("click", (e) => {
+          if (beverageIsDragging) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        });
+      });
+
+      // Touch events
+      slider.addEventListener("touchstart", handleBeverageTouchStart, { passive: false });
+      slider.addEventListener("touchmove", handleBeverageTouchMove, { passive: false });
+      slider.addEventListener("touchend", handleBeverageTouchEnd, { passive: false });
+
+      // Mouse events
+      slider.addEventListener("mousedown", handleBeverageMouseDown);
+      slider.addEventListener("mousemove", handleBeverageMouseMove);
+      slider.addEventListener("mouseup", handleBeverageMouseUp);
+      slider.addEventListener("mouseleave", handleBeverageMouseUp);
+    }
+
+    function handleBeverageTouchStart(e) {
+      beverageStartX = e.touches[0].clientX;
+      beverageCurrentX = beverageStartX;
+      beverageIsDragging = false;
+    }
+
+    function handleBeverageTouchMove(e) {
+      if (!beverageStartX) return;
+
+      beverageCurrentX = e.touches[0].clientX;
+      const diff = beverageCurrentX - beverageStartX;
+
+      if (Math.abs(diff) > 10) {
+        beverageIsDragging = true;
+        e.preventDefault();
+      }
+
+      if (beverageIsDragging) {
+        updateBeverageSliderPosition(diff);
+      }
+    }
+
+    function handleBeverageTouchEnd(e) {
+      if (!beverageStartX) {
+        beverageStartX = 0;
+        beverageCurrentX = 0;
+        return;
+      }
+
+      const diff = beverageCurrentX - beverageStartX;
+      const threshold = beverageCardWidth * 0.25;
+
+      if (beverageIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && beverageCurrentIndex > 0) {
+          beverageCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("beverageSlider");
+          if (slider) {
+            const panels = slider.querySelectorAll(".menu-panel");
+            if (beverageCurrentIndex < panels.length - 1) {
+              beverageCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideBeverageToIndex(beverageCurrentIndex);
+
+      beverageIsDragging = false;
+      beverageStartX = 0;
+      beverageCurrentX = 0;
+    }
+
+    function handleBeverageMouseDown(e) {
+      beverageStartX = e.clientX;
+      beverageCurrentX = beverageStartX;
+      beverageIsDragging = false;
+      e.preventDefault();
+    }
+
+    function handleBeverageMouseMove(e) {
+      if (!beverageStartX) return;
+
+      beverageCurrentX = e.clientX;
+      const diff = beverageCurrentX - beverageStartX;
+
+      if (Math.abs(diff) > 10) {
+        beverageIsDragging = true;
+      }
+
+      if (beverageIsDragging) {
+        e.preventDefault();
+        updateBeverageSliderPosition(diff);
+      }
+    }
+
+    function handleBeverageMouseUp(e) {
+      if (!beverageStartX) {
+        beverageStartX = 0;
+        beverageCurrentX = 0;
+        return;
+      }
+
+      const diff = beverageCurrentX - beverageStartX;
+      const threshold = beverageCardWidth * 0.25;
+
+      if (beverageIsDragging && Math.abs(diff) > threshold) {
+        e.preventDefault();
+        if (diff > 0 && beverageCurrentIndex > 0) {
+          beverageCurrentIndex--;
+        } else if (diff < 0) {
+          const slider = document.getElementById("beverageSlider");
+          if (slider) {
+            const panels = slider.querySelectorAll(".menu-panel");
+            if (beverageCurrentIndex < panels.length - 1) {
+              beverageCurrentIndex++;
+            }
+          }
+        }
+      }
+
+      slideBeverageToIndex(beverageCurrentIndex);
+
+      beverageIsDragging = false;
+      beverageStartX = 0;
+      beverageCurrentX = 0;
+    }
+
+    function updateBeverageSliderPosition(offset) {
+      const slider = document.getElementById("beverageSlider");
+      if (!slider || beverageCardWidth === 0) return;
+
+      const baseOffset = -(beverageCurrentIndex * beverageCardWidth);
+      const newOffset = baseOffset + offset;
+
+      const panels = slider.querySelectorAll(".menu-panel");
+      const minOffset = -((panels.length - 1) * beverageCardWidth);
+      const maxOffset = 0;
+
+      const clampedOffset = Math.max(minOffset, Math.min(maxOffset, newOffset));
+      slider.style.transform = `translateX(${clampedOffset}px)`;
+      slider.style.transition = "none";
+    }
+
+    function slideBeverageToIndex(index) {
+      const slider = document.getElementById("beverageSlider");
+      if (!slider || beverageCardWidth === 0) return;
+
+      const panels = slider.querySelectorAll(".menu-panel");
+      if (index < 0 || index >= panels.length) return;
+
+      beverageCurrentIndex = index;
+      const offset = -(index * beverageCardWidth);
+      slider.style.transition = "transform 0.3s ease-out";
+      slider.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Initialize beverage slider
+    if (document.getElementById("beverageSlider")) {
+      setTimeout(() => {
+        initBeverageSlider();
+        slideBeverageToIndex(0);
+
+        // Recalculate on resize
+        let resizeTimeout;
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(() => {
+            const slider = document.getElementById("beverageSlider");
+            if (slider) {
+              const panels = slider.querySelectorAll(".menu-panel");
+              if (panels.length > 0) {
+                const firstPanel = panels[0];
+                beverageCardWidth = firstPanel.offsetWidth + beverageGap;
+                slideBeverageToIndex(beverageCurrentIndex);
+              }
+            }
+          }, 250);
+        });
+      }, 100);
+    }
+
+    // Countdown Timer
+    function updateCountdown() {
+      const newYear = new Date("2026-01-01T00:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = newYear - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("hours").textContent = hours
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes
+          .toString()
+          .padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds
+          .toString()
+          .padStart(2, "0");
+      } else {
+        document.getElementById("countdown").innerHTML =
+          '<div class="countdown-item"><span class="countdown-number">HAPPY</span><span class="countdown-label">Valentine\'s Day 2026!</span></div>';
+      }
+    }
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Booking form handler
+    function handleBooking(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+
+      // Get form values
+      const fullName = form.querySelector(
+        'input[placeholder="Full Name *"]'
+      ).value;
+      const phoneNumber = form.querySelector(
+        'input[placeholder="Phone Number *"]'
+      ).value;
+      const adults = form.querySelector(
+        'input[placeholder="Number of Adults *"]'
+      ).value;
+      const kids =
+        form.querySelector('input[placeholder="Number of Kids (5-11)"]')
+          .value || "0";
+      const kidsUnder5 =
+        form.querySelector('input[placeholder="Kids Under 5 (Free)"]')
+          .value || "0";
+      const email =
+        form.querySelector('input[placeholder="Email Address"]').value ||
+        "Not provided";
+
+      // Calculate total cost
+      const adultPrice = 4999;
+      const kidPrice = 3499;
+      const totalCost =
+        parseInt(adults) * adultPrice + parseInt(kids) * kidPrice;
+
+      // Create WhatsApp message
+      const message = `🎉 *VALENTINE'S DAY 2026 - NAUTI AMIGO CRUISE BOOKING INQUIRY*
+
+👤 *Guest Details:*
+Name: ${fullName}
+Phone: ${phoneNumber}
+Email: ${email}
+
+🎫 *Booking Details:*
+• Adults (11+): ${adults} × ₹${adultPrice.toLocaleString()} = ₹${(
+          parseInt(adults) * adultPrice
+        ).toLocaleString()}
+• Kids (5-11): ${kids} × ₹${kidPrice.toLocaleString()} = ₹${(
+          parseInt(kids) * kidPrice
+        ).toLocaleString()}
+• Kids Under 5: ${kidsUnder5} × FREE = ₹0
+
+💰 *Total Amount: ₹${totalCost.toLocaleString()}*
+
+🚢 *Event Details:*
+📅 Date: 31st December 2025
+🕰️ Time: Evening to Midnight
+📍 Location: Nauti Amigo Cruise, Goa
+🎊 Includes: Premium dining, unlimited drinks, entertainment, reserved table
+
+Please confirm availability and share payment details. Thank you!`;
+
+      // Get WhatsApp number from config or default
+      const config = window.elementSdk
+        ? window.elementSdk.config
+        : defaultConfig;
+      const whatsappNumber = (
+        config.whatsapp_number || defaultConfig.whatsapp_number
+      ).replace(/[^0-9]/g, "");
+
+      // Create WhatsApp URL
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        message
+      )}`;
+
+      // Show loading state
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerHTML;
+      submitButton.innerHTML = "<span>Redirecting to WhatsApp...</span>";
+      submitButton.disabled = true;
+
+      // Redirect to WhatsApp after short delay
+      setTimeout(() => {
+        window.open(whatsappURL, "_blank");
+
+        // Show success message
+        const successDiv = document.createElement("div");
+        successDiv.className = "special-highlight";
+        successDiv.style.marginTop = "30px";
+        successDiv.innerHTML =
+          "✅ <strong>Redirected to WhatsApp!</strong><br>Your booking details have been sent. Our team will confirm availability and share payment details shortly.";
+
+        form.parentNode.appendChild(successDiv);
+        form.reset();
+
+        // Reset button
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+
+        // Remove success message after 8 seconds
+        setTimeout(() => {
+          successDiv.remove();
+        }, 8000);
+      }, 1500);
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = "fadeInUp 1s ease-out forwards";
+        }
+      });
+    }, observerOptions);
+
+    // Observe entertainment cards
+    document.querySelectorAll(".entertainment-card").forEach((card) => {
+      observer.observe(card);
+    });
+
+    // Element SDK Configuration
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = "serif";
+
+      // Update text content
+      document.getElementById("main-title").textContent =
+        config.main_title || defaultConfig.main_title;
+      document.getElementById("subtitle").textContent =
+        config.subtitle || defaultConfig.subtitle;
+      document.getElementById("highlight-text").textContent = `✨ ${config.highlight_text || defaultConfig.highlight_text
+        } ✨`;
+      document.getElementById("adult-price").textContent =
+        config.adult_price || defaultConfig.adult_price;
+      document.getElementById("kids-price").textContent =
+        config.kids_price || defaultConfig.kids_price;
+
+      // Update contact information
+      const phoneNumber = config.phone_number || defaultConfig.phone_number;
+      const whatsappNumber =
+        config.whatsapp_number || defaultConfig.whatsapp_number;
+
+      document.getElementById("phone-link").href = `tel:${phoneNumber}`;
+      document.getElementById(
+        "footer-phone"
+      ).textContent = `📞 ${phoneNumber}`;
+      document.getElementById(
+        "footer-whatsapp"
+      ).textContent = `📱 ${whatsappNumber}`;
+
+      // Update WhatsApp links
+      document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+        link.href = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`;
+      });
+
+      // Apply colors
+      const backgroundColor =
+        config.background_color || defaultConfig.background_color;
+      const accentColor = config.accent_color || defaultConfig.accent_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+
+      document.body.style.background = backgroundColor;
+      document.body.style.color = textColor;
+
+      // Update accent colors throughout the page
+      const accentElements = document.querySelectorAll(
+        ".section-title, .cruise-logo, .countdown-number, .card-title, .menu-title, .price-title"
+      );
+      accentElements.forEach((el) => {
+        el.style.color = accentColor;
+      });
+
+      // Apply font family and sizing
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+
+      // Scale fonts proportionally
+      document.querySelector(".main-title").style.fontSize = `${baseSize * 2.8
+        }px`;
+      document.querySelector(".subtitle").style.fontSize = `${baseSize * 1.25
+        }px`;
+      document.querySelectorAll(".section-title").forEach((el) => {
+        el.style.fontSize = `${baseSize * 2.5}px`;
+      });
+      document.querySelectorAll(".card-title").forEach((el) => {
+        el.style.fontSize = `${baseSize * 1.125}px`;
+      });
+      document.querySelectorAll(".menu-title").forEach((el) => {
+        el.style.fontSize = `${baseSize * 1.56}px`;
+      });
+    }
+
+    // Phone number display for web view
+    function setupPhoneNumberDisplay() {
+      const phoneLink = document.getElementById("phone-link");
+      if (!phoneLink) return;
+
+      // Detect if it's a web view (desktop, not mobile)
+      const isWebView = window.innerWidth > 768 && !('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+      if (isWebView) {
+        phoneLink.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const phoneNumber = this.href.replace('tel:', '');
+          const formattedNumber = phoneNumber.replace(/(\+91)(\d{2})(\d{4})(\d{4})/, '$1 $2 $3 $4');
+
+          // Get the span element
+          const span = this.querySelector('span');
+          const originalText = span.textContent;
+
+          // Update the button text with beautified number
+          span.textContent = formattedNumber;
+          span.style.fontSize = '1.5rem';
+          span.style.letterSpacing = '1.5px';
+          span.style.fontWeight = '600';
+
+          // After 3 seconds, revert to original text
+          setTimeout(() => {
+            span.textContent = originalText;
+            span.style.fontSize = '';
+            span.style.letterSpacing = '';
+          }, 3000);
+        });
+      }
+    }
+
+    // Initialize phone number display
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupPhoneNumberDisplay);
+    } else {
+      setupPhoneNumberDisplay();
+    }
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () =>
+                config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              },
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              },
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              },
+            },
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            },
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            },
+          },
+        }),
+        mapToEditPanelValues: (config) =>
+          new Map([
+            ["main_title", config.main_title || defaultConfig.main_title],
+            ["subtitle", config.subtitle || defaultConfig.subtitle],
+            [
+              "highlight_text",
+              config.highlight_text || defaultConfig.highlight_text,
+            ],
+            ["adult_price", config.adult_price || defaultConfig.adult_price],
+            ["kids_price", config.kids_price || defaultConfig.kids_price],
+            [
+              "phone_number",
+              config.phone_number || defaultConfig.phone_number,
+            ],
+            [
+              "whatsapp_number",
+              config.whatsapp_number || defaultConfig.whatsapp_number,
+            ],
+          ]),
+      });
+    }
+  </script>
+  <script>
+    (function () {
+      function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+          var d = b.createElement("script");
+          d.innerHTML =
+            "window.__CF$cv$params={r:'99822257870b59d8',t:'MTc2MjA3MDgwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+          b.getElementsByTagName("head")[0].appendChild(d);
+        }
+      }
+      if (document.body) {
+        var a = document.createElement("iframe");
+        a.height = 1;
+        a.width = 1;
+        a.style.position = "absolute";
+        a.style.top = 0;
+        a.style.left = 0;
+        a.style.border = "none";
+        a.style.visibility = "hidden";
+        document.body.appendChild(a);
+        if ("loading" !== document.readyState) c();
+        else if (window.addEventListener)
+          document.addEventListener("DOMContentLoaded", c);
+        else {
+          var e = document.onreadystatechange || function () { };
+          document.onreadystatechange = function (b) {
+            e(b);
+            "loading" !== document.readyState &&
+              ((document.onreadystatechange = e), c());
+          };
+        }
+      }
+    })();
+  </script>
+</body>
+
+</html>
