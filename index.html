@@ -1001,12 +1001,9 @@
                </div>
             </div>
          </div>
-         <!--<div class="sticky-footer">-->
-         <!--<button class="call-us" onclick="callPhoneNumber('+919324105081')">Call Now</button>-->
-         <!--<button class="whatsapp" onclick="openWhatsApp('+919324105081')">Get Details</button>-->
-         <!--</div>-->
+
          
-         <a href="https://wa.me/+919324105081" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+         <a href="https://wa.me/+919324105081?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Nauti%20Amigo%20Luxury%20Dinner%20Cruise%20packages%20in%20Goa%21" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
          <i class="fab fa-whatsapp"></i>
          </a>
       </footer>
@@ -1036,11 +1033,14 @@
            window.location.href = `tel:${phoneNumber}`;
          }
          
-         // Function to open WhatsApp with the given phone number
-         function openWhatsApp(phoneNumber) {
-           const message = "Hi, I would like to enquire about Nauti Amio Cruise!";
-           const encodedMessage = encodeURIComponent(message); // Ensure the message is properly encoded for URL
-           window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+         // Function to open WhatsApp with the given phone number and optional title/message (e.g. package name or full message)
+         function openWhatsApp(phoneNumber, titleOrMessage) {
+           const defaultMsg = "Hi, I would like to enquire about Nauti Amigo Cruise!";
+           const message = !titleOrMessage
+             ? defaultMsg
+             : (titleOrMessage.indexOf("Hello") === 0 ? titleOrMessage : "Hello, I would like to know more about the Nauti Amigo " + titleOrMessage);
+           const encodedMessage = encodeURIComponent(message);
+           window.location.href = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodedMessage}`;
          }
          
          

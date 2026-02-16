@@ -19,9 +19,12 @@ function calculateDiscount(regularPrice, discountPrice) {
   return Math.round(((regular - discount) / regular) * 100);
 }
 
- function openWhatsApp(phone) {
+ function openWhatsApp(phone, message) {
     const cleanPhone = phone.replace(/\D/g, '');
-    const url = `https://wa.me/${cleanPhone}`;
+    let url = `https://wa.me/${cleanPhone}`;
+    if (message) {
+      url += '?text=' + encodeURIComponent(message);
+    }
     window.open(url, '_blank');
 }
 
@@ -1232,8 +1235,8 @@ function renderCruiseCardsCarousel(cruises) {
                 </ul>
               </div>
               <div class="show-full-info">
-                <div class="link link-cursor">
-                  Call for more details
+                <div class="link link-cursor" onclick="window.location.href='${getBaseUrl()}${offer.routingUrl}'">
+                  Show inclusions & important info
                   <img src="/img/images/svg/arrow-ico.svg" alt="" />
                 </div>
               </div>
@@ -1258,7 +1261,7 @@ function renderCruiseCardsCarousel(cruises) {
                   <button class="primary-button" onclick="window.location.href='${getBaseUrl()}${offer.routingUrl}'">
                     Book Online
                   </button>
-                  <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
+                  <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081', 'Hello, I would like to know more about the Nauti Amigo ${String(offer.title).replace(/'/g, "\\'")}')">
                     Book on WhatsApp
                   </button>
                 </div>
@@ -1275,7 +1278,7 @@ function renderCruiseCardsCarousel(cruises) {
         .join("")}
                 </div>
                 <div class="show-full-info dotted-border">
-                  <div (click)="openWhatsApp('+919324105081')" class="whatsapp link link-cursor">
+                  <div class="whatsapp link link-cursor" data-whatsapp-msg="Hello, I would like to know more about the Nauti Amigo ${String(offer.title).replace(/"/g, '&quot;')}" onclick="openWhatsApp('+919324105081', this.getAttribute('data-whatsapp-msg'))">
                 <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
 
                 Book on WhatsApp
@@ -1356,7 +1359,7 @@ function renderCruiseCards(cruises, containerId = "cruise-container") {
               </div>
               <div class="show-full-info">
                 <div class="link link-cursor">
-                  Call for more details
+                  Show inclusions & important info
                   <img src="/img/images/svg/arrow-ico.svg" alt="" />
                 </div>
               </div>
@@ -1375,7 +1378,7 @@ function renderCruiseCards(cruises, containerId = "cruise-container") {
                   <button class="primary-button" onclick="window.location.href='tel:9324105081'">
                     Call Now
                   </button>
-                  <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081')">
+                  <button class="secondary-button m-ele" onclick="openWhatsApp('+919324105081', 'Hello, I would like to know more about the Nauti Amigo ${String(offer.title).replace(/'/g, "\\'")}')">
                     Book on WhatsApp
                   </button>
                 </div>
@@ -1392,7 +1395,7 @@ function renderCruiseCards(cruises, containerId = "cruise-container") {
         .join("")}
                 </div>
                 <div class="show-full-info dotted-border">
-                  <div onclick="openWhatsApp('+919324105081')" class="whatsapp link link-cursor">
+                  <div class="whatsapp link link-cursor" data-whatsapp-msg="Hello, I would like to know more about the Nauti Amigo ${String(offer.title).replace(/"/g, '&quot;')}" onclick="openWhatsApp('+919324105081', this.getAttribute('data-whatsapp-msg'))">
                 <img src="/img/dinnercruise/whatsapp_icon.png" alt="WhatsApp icon" />
 
                 Book on WhatsApp
