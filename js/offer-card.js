@@ -889,7 +889,7 @@ const offer = [
       },
       {
         about1:
-          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+          'Embark on the Nauti Amigo Luxury Dinner Cruise in Goa to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
       },
     ],
 
@@ -1081,7 +1081,7 @@ const offer = [
       },
       {
         about1:
-          'Embark on the Nauti Amigo Luxury Dinner Cruise to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
+          'Embark on the Nauti Amigo Luxury Dinner Cruise in Goa to enjoy an evening of elegance, entertainment, and exquisite dining as you sail along the serene Mandovi River.',
       },
     ],
 
